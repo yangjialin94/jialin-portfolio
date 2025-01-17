@@ -1,100 +1,155 @@
-import Image from "next/image";
+'use client';
+
+import React from 'react';
+import { motion } from 'framer-motion';
+import {
+  ArrowDownTrayIcon,
+  AcademicCapIcon,
+  CodeBracketIcon,
+  EnvelopeIcon,
+} from '@heroicons/react/24/outline';
+
+const Hero = () => {
+  return (
+    <div className="space-y-4 text-left">
+      <motion.div
+        animate={{ opacity: [0, 1], y: [20, 0] }}
+        transition={{ duration: 1, easing: 'ease-in-out' }}
+      >
+        <h1 className="text-4xl font-bold leading-tight tracking-wide sm:text-5xl md:text-6xl">
+          Hi, I&apos;m Jialin Yang <br />
+          Full-Stack Software Engineer & Curious Creator 🚀
+        </h1>
+      </motion.div>
+      <motion.p
+        animate={{ opacity: [0, 1], y: [20, 0] }}
+        transition={{ duration: 1, delay: 0.5, easing: 'ease-in-out' }}
+        className="mt-2 text-lg leading-relaxed text-gray-700 sm:text-xl dark:text-gray-300"
+      >
+        Building impactful software solutions while exploring the deeper meaning
+        behind every innovation.
+      </motion.p>
+    </div>
+  );
+};
+
+interface ListItemProps {
+  number: string;
+  text: string;
+  delay?: number;
+  borderColor: string;
+}
+
+const ListItem = ({ number, text, delay, borderColor }: ListItemProps) => {
+  return (
+    <motion.div
+      animate={{ opacity: [0, 1], x: [-20, 0] }}
+      transition={{ duration: 0.5, delay, easing: 'ease-in-out' }}
+      className="flex items-center gap-6"
+    >
+      <div
+        className={`flex items-center justify-center w-16 h-16 rounded-full border-4 ${borderColor} text-lg font-bold shadow-md`}
+      >
+        {number}
+      </div>
+      <span className="text-lg font-medium text-gray-800 dark:text-gray-100">
+        {text}
+      </span>
+    </motion.div>
+  );
+};
+
+const Stats = () => {
+  return (
+    <div className="flex flex-col gap-8 mt-12">
+      <ListItem
+        number="10+"
+        text="Professional Projects Delivered"
+        delay={0.5}
+        borderColor="border-blue-500"
+      />
+      <ListItem
+        number="6+"
+        text="Years of Experience"
+        delay={0.7}
+        borderColor="border-green-500"
+      />
+    </div>
+  );
+};
+
+const DownloadResume = () => {
+  return (
+    <motion.a
+      animate={{ opacity: [0, 1], scale: [0.8, 1] }}
+      transition={{ duration: 0.5, delay: 1 }}
+      className="flex items-center justify-center h-12 gap-3 px-6 mt-12 text-base font-medium text-white transition-all bg-blue-600 border border-transparent border-solid rounded-lg shadow-md hover:shadow-lg dark:bg-gray-300 dark:text-black dark:hover:bg-gray-400 sm:text-lg sm:h-14 sm:px-8 hover:text-xl hover:font-semibold"
+      href="/resume/1224.pdf"
+      download="Jialin_Resume.pdf"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <ArrowDownTrayIcon className="w-6 h-6" />
+      Download Resume
+    </motion.a>
+  );
+};
+
+interface TabProps {
+  text: string;
+  href: string;
+  hoverColor: string;
+  Icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+}
+
+const Tab = ({ text, href, hoverColor, Icon }: TabProps) => {
+  return (
+    <motion.a
+      whileHover={{ scale: 1.1 }}
+      className={`flex items-center gap-3 px-4 py-2 text-lg font-medium text-gray-100 transition-all rounded-lg hover:text-${hoverColor}-400`}
+      href={href}
+    >
+      <Icon className="w-6 h-6" />
+      {text}
+    </motion.a>
+  );
+};
+
+const Tabs = () => {
+  return (
+    <div className="flex items-center justify-center gap-6 mx-auto">
+      <Tab
+        text="Skills"
+        href="/skills"
+        hoverColor="blue"
+        Icon={AcademicCapIcon}
+      />
+      <Tab
+        text="Projects"
+        href="/projects"
+        hoverColor="green"
+        Icon={CodeBracketIcon}
+      />
+      <Tab
+        text="Contact"
+        href="/contact"
+        hoverColor="yellow"
+        Icon={EnvelopeIcon}
+      />
+    </div>
+  );
+};
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="images/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="images/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex text-red-500 items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
+    <div className="flex flex-col min-h-screen">
+      <main className="flex-1 flex flex-col items-start justify-center gap-10 px-8 pb-20 sm:px-20 font-[family-name:var(--font-geist-sans)]">
+        <Hero />
+        <Stats />
+        <DownloadResume />
       </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="images/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="images/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="images/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+      <footer className="py-6 bg-gray-900">
+        <Tabs />
       </footer>
     </div>
   );
