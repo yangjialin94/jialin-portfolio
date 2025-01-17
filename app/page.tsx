@@ -18,7 +18,7 @@ const Hero = () => {
         animate={{ opacity: [0, 1], y: [20, 0] }}
         transition={{ duration: 1, easing: 'ease-in-out' }}
       >
-        <h1 className="text-3xl font-bold leading-tight tracking-wide sm:text-4xl md:text-5xl">
+        <h1 className="text-3xl font-bold leading-tight tracking-wide text-gray-900 sm:text-4xl md:text-5xl dark:text-white">
           Hi, I&apos;m Jialin Yang <br />
           Full-Stack Software Engineer & Curious Creator 🚀
         </h1>
@@ -26,7 +26,7 @@ const Hero = () => {
       <motion.p
         animate={{ opacity: [0, 1], y: [20, 0] }}
         transition={{ duration: 1, delay: 0.5, easing: 'ease-in-out' }}
-        className="mt-2 text-base leading-relaxed text-gray-700 sm:text-lg md:text-xl dark:text-gray-300"
+        className="mt-2 text-base leading-relaxed text-gray-600 sm:text-lg md:text-xl dark:text-gray-400"
       >
         Building impactful software solutions while exploring the deeper meaning
         behind every innovation.
@@ -43,7 +43,7 @@ const ListItem = ({ number, text, delay, borderColor }) => {
       className="flex items-center gap-4"
     >
       <div
-        className={`flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 rounded-full border-4 ${borderColor} text-sm sm:text-lg font-bold shadow-md`}
+        className={`flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 rounded-full border-4 ${borderColor} text-sm sm:text-lg font-bold shadow-md bg-gray-100 dark:bg-gray-800`}
       >
         {number}
       </div>
@@ -61,13 +61,13 @@ const Stats = () => {
         number="10+"
         text="Professional Projects Delivered"
         delay={0.5}
-        borderColor="border-blue-500"
+        borderColor="border-blue-400"
       />
       <ListItem
         number="6+"
         text="Years of Experience"
         delay={0.7}
-        borderColor="border-green-500"
+        borderColor="border-green-400"
       />
     </div>
   );
@@ -78,7 +78,7 @@ const DownloadResume = () => {
     <motion.a
       animate={{ opacity: [0, 1], scale: [0.8, 1] }}
       transition={{ duration: 0.5, delay: 1 }}
-      className="flex items-center justify-center h-10 gap-3 px-4 mt-8 text-sm font-medium text-white transition-all bg-blue-600 border border-transparent border-solid rounded-lg shadow-md dark:bg-gray-300 dark:text-black dark:hover:bg-gray-400 sm:text-base sm:h-12 sm:px-6 hover:shadow-lg"
+      className="flex items-center justify-center h-10 gap-3 px-4 mt-8 text-sm font-medium text-white transition-all bg-blue-500 rounded-lg shadow-md sm:text-base sm:h-12 sm:px-6 hover:bg-blue-600 dark:bg-blue-600 dark:hover:bg-blue-500"
       href="/resume/1224.pdf"
       download="Jialin_Resume.pdf"
       target="_blank"
@@ -91,21 +91,21 @@ const DownloadResume = () => {
 };
 
 const Tab = ({ text, href, hoverColor, Icon }) => {
+  const hoverClass =
+    hoverColor === 'blue'
+      ? 'hover:text-blue-600 dark:hover:text-blue-300'
+      : hoverColor === 'green'
+        ? 'hover:text-green-600 dark:hover:text-green-300'
+        : hoverColor === 'yellow'
+          ? 'hover:text-yellow-600 dark:hover:text-yellow-300'
+          : '';
   return (
     <motion.a
       whileHover={{
         scale: 1.1,
         transition: { duration: 0.2, ease: 'easeOut' },
       }}
-      className={`flex items-center gap-3 px-3 py-2 text-sm sm:text-base font-medium text-gray-100 transition-all rounded-lg ${
-        hoverColor === 'blue'
-          ? 'hover:text-blue-400'
-          : hoverColor === 'green'
-            ? 'hover:text-green-400'
-            : hoverColor === 'yellow'
-              ? 'hover:text-yellow-400'
-              : ''
-      }`}
+      className={`flex items-center gap-3 px-3 py-2 text-sm sm:text-base font-medium text-gray-900 dark:text-gray-100 transition-all rounded-lg ${hoverClass}`}
       href={href}
     >
       <Icon className="w-5 h-5 sm:w-6 sm:h-6" />
@@ -141,13 +141,13 @@ const Tabs = () => {
 
 export default function Home() {
   return (
-    <div className="flex flex-col min-h-screen">
-      <main className="flex-1 flex flex-col items-start justify-center gap-10 px-4 pb-16 sm:px-8 sm:pb-20 md:px-16 lg:px-20 font-[family-name:var(--font-geist-sans)]">
+    <div className="flex flex-col min-h-screen text-gray-900 bg-gray-50 dark:bg-gray-900 dark:text-gray-100">
+      <main className="flex flex-col items-start justify-center flex-1 gap-10 px-4 pb-16 sm:px-8 sm:pb-20 md:px-16 lg:px-20">
         <Hero />
         <Stats />
         <DownloadResume />
       </main>
-      <footer className="py-6 bg-gray-900">
+      <footer className="py-6 bg-gray-100 dark:bg-gray-800">
         <Tabs />
       </footer>
       <ThemeSwitcher />
