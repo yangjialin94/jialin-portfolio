@@ -90,7 +90,7 @@ const DownloadResume = () => {
         ease: 'linear',
       }}
       className="flex items-center justify-center h-10 gap-3 px-4 mt-8 text-sm font-medium text-white transition-all bg-blue-500 rounded-lg shadow-md sm:text-base sm:h-12 sm:px-6 hover:bg-blue-600 dark:bg-blue-600 dark:hover:bg-blue-500"
-      href="/resume/1224.pdf"
+      href="/resumes/1224.pdf"
       download="Jialin_Resume.pdf"
       target="_blank"
       rel="noopener noreferrer"
