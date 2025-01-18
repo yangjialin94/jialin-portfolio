@@ -35,7 +35,14 @@ const Hero = () => {
   );
 };
 
-const ListItem = ({ number, text, delay, borderColor }) => {
+interface ListItemProps {
+  number: string;
+  text: string;
+  delay: number;
+  borderColor: string;
+}
+
+const ListItem = ({ number, text, delay, borderColor }: ListItemProps) => {
   return (
     <motion.div
       animate={{ opacity: [0, 1], x: [-20, 0] }}
@@ -94,7 +101,20 @@ const DownloadResume = () => {
   );
 };
 
-const Tab = ({ text, href, hoverColor, Icon }) => {
+type IconType =
+  | typeof ArrowDownTrayIcon
+  | typeof AcademicCapIcon
+  | typeof CodeBracketIcon
+  | typeof EnvelopeIcon;
+
+interface LinkItem {
+  text: string;
+  href: string;
+  hoverColor: string;
+  Icon: IconType;
+}
+
+const Tab = ({ text, href, hoverColor, Icon }: LinkItem) => {
   const hoverClass =
     hoverColor === 'blue'
       ? 'hover:text-blue-600 dark:hover:text-blue-300'
