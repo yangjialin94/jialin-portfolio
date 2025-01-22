@@ -2,6 +2,9 @@ import type { Metadata } from 'next';
 import { Geist } from 'next/font/google';
 import '@/styles/globals.css';
 
+import Footer from '@/components/footer';
+import ThemeSwitcher from '@/components/theme-switcher';
+
 const geistSans = Geist({
   variable: '--font-geist-sans',
   subsets: ['latin'],
@@ -43,7 +46,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} antialiased`}>{children}</body>
+      <body
+        className={`${geistSans.variable} antialiased flex flex-col min-h-screen text-gray-900 bg-gray-50 dark:bg-gray-900 dark:text-gray-100`}
+      >
+        {/* Main */}
+        {children}
+
+        {/* Footer */}
+        <Footer />
+
+        {/* Theme */}
+        <ThemeSwitcher />
+      </body>
     </html>
   );
 }

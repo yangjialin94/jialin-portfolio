@@ -1,15 +1,8 @@
 'use client';
 
-import {
-  ArrowDownTrayIcon,
-  AcademicCapIcon,
-  CodeBracketIcon,
-  EnvelopeIcon,
-} from '@heroicons/react/24/outline';
-import { motion } from 'framer-motion';
+import { ArrowDownTrayIcon } from '@heroicons/react/24/outline';
+import { motion } from 'motion/react';
 import React from 'react';
-
-import ThemeSwitcher from '@/components/theme-switcher';
 
 const Hero = () => {
   return (
@@ -90,10 +83,11 @@ const DownloadResume = () => {
         ease: 'linear',
       }}
       className="flex items-center justify-center h-10 gap-3 px-4 mt-8 text-sm font-medium text-white transition-all bg-blue-500 rounded-lg shadow-md sm:text-base sm:h-12 sm:px-6 hover:bg-blue-600 dark:bg-blue-600 dark:hover:bg-blue-500"
-      href="/resumes/1224.pdf"
+      href="/files/jialin_resume_0125.pdf"
       download="Jialin_Resume.pdf"
       target="_blank"
       rel="noopener noreferrer"
+      aria-label="Download Jialin's Resume as a PDF"
     >
       <ArrowDownTrayIcon className="w-5 h-5 sm:w-6 sm:h-6" />
       Download Resume
@@ -101,80 +95,14 @@ const DownloadResume = () => {
   );
 };
 
-type IconType =
-  | typeof ArrowDownTrayIcon
-  | typeof AcademicCapIcon
-  | typeof CodeBracketIcon
-  | typeof EnvelopeIcon;
-
-interface LinkItem {
-  text: string;
-  href: string;
-  hoverColor: string;
-  Icon: IconType;
-}
-
-const Tab = ({ text, href, hoverColor, Icon }: LinkItem) => {
-  const hoverClass =
-    hoverColor === 'blue'
-      ? 'hover:text-blue-600 dark:hover:text-blue-300'
-      : hoverColor === 'green'
-        ? 'hover:text-green-600 dark:hover:text-green-300'
-        : hoverColor === 'yellow'
-          ? 'hover:text-yellow-600 dark:hover:text-yellow-300'
-          : '';
-  return (
-    <motion.a
-      whileHover={{
-        scale: 1.2,
-        transition: { duration: 0.2, ease: 'easeOut' },
-      }}
-      className={`flex items-center gap-3 px-3 py-2 text-sm sm:text-base font-medium text-gray-900 dark:text-gray-100 transition-all rounded-lg ${hoverClass}`}
-      href={href}
-    >
-      <Icon className="w-5 h-5 sm:w-6 sm:h-6" />
-      {text}
-    </motion.a>
-  );
-};
-
-const Tabs = () => {
-  return (
-    <div className="flex items-center justify-center gap-4 mx-auto sm:gap-6">
-      <Tab
-        text="Skills"
-        href="/skills"
-        hoverColor="blue"
-        Icon={AcademicCapIcon}
-      />
-      <Tab
-        text="Projects"
-        href="/projects"
-        hoverColor="green"
-        Icon={CodeBracketIcon}
-      />
-      <Tab
-        text="Contact"
-        href="/contact"
-        hoverColor="yellow"
-        Icon={EnvelopeIcon}
-      />
-    </div>
-  );
-};
-
 export default function Home() {
   return (
-    <div className="flex flex-col min-h-screen text-gray-900 bg-gray-50 dark:bg-gray-900 dark:text-gray-100">
+    <>
       <main className="flex flex-col items-start justify-center flex-1 gap-10 px-4 pb-16 sm:px-8 sm:pb-20 md:px-16 lg:px-20">
         <Hero />
         <Stats />
         <DownloadResume />
       </main>
-      <footer className="py-6 bg-gray-100 dark:bg-gray-800">
-        <Tabs />
-      </footer>
-      <ThemeSwitcher />
-    </div>
+    </>
   );
 }
