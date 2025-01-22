@@ -13,7 +13,7 @@ const Hero = () => {
       >
         <h1 className="text-3xl font-bold leading-tight tracking-wide text-gray-900 sm:text-4xl md:text-5xl dark:text-white">
           Hi, I&apos;m Jialin Yang <br />
-          Full-Stack Software Engineer & Curious Creator 🚀
+          Software Engineer & Curious Creator 🚀
         </h1>
       </motion.div>
       <motion.p
