@@ -2,8 +2,8 @@
 
 import React from 'react';
 
-// import projects from '@/data/projects.json';
 import Footer from '@/components/footer';
+// import projects from '@/data/projects.json';
 
 export default function Projects() {
   return (

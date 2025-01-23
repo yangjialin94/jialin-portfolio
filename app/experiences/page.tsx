@@ -7,7 +7,7 @@ import React from 'react';
 
 import Bullet from '@/components/bullet';
 import Footer from '@/components/footer';
-import experiences from '@/data/experiences';
+import experiences from '@/data/experiences.json';
 
 interface Task {
   id: number;
