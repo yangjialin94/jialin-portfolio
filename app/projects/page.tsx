@@ -3,16 +3,19 @@
 import React from 'react';
 
 // import projects from '@/data/projects.json';
+import Footer from '@/components/footer';
 
 export default function Projects() {
   return (
-    <main className="flex flex-col items-start justify-center flex-1 gap-10 px-8 py-10 sm:px-8 sm:pb-20 md:px-16 lg:px-20">
-      {/* Heading */}
-      <h2 className="text-2xl font-bold">My Projects</h2>
+    <>
+      {/* Main */}
+      <main className="flex flex-1 flex-col items-start justify-center gap-10 px-8 py-10 sm:px-8 sm:pb-20 md:px-16 lg:px-20">
+        {/* Heading */}
+        <h2 className="text-2xl font-bold">My Projects</h2>
 
-      {/* Projects */}
-      <div className="grid gap-6 mt-4 sm:grid-cols-2 lg:grid-cols-3">
-        {/* {projects.map((project) => (
+        {/* Projects */}
+        <div className="mt-4 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {/* {projects.map((project) => (
           <div key={project.id} className="p-4 border rounded-lg shadow">
             <img
               src={project.image}
@@ -31,7 +34,11 @@ export default function Projects() {
             </a>
           </div>
         ))} */}
-      </div>
-    </main>
+        </div>
+      </main>
+
+      {/* Footer */}
+      <Footer page="Projects" />
+    </>
   );
 }

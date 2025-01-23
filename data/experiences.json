@@ -1,0 +1,126 @@
+[
+  {
+    "id": 1,
+    "title": "Co-Founder & Software Engineer",
+    "company": "Nuve",
+    "dates": "Jul 2021 - Dec 2024",
+    "website": "https://www.nuveplatform.com",
+    "mainTasks": [
+      {
+        "id": 1,
+        "description": "Co-developed and maintained the Nuve website.",
+        "skills": ["Next.js", "React", "Tailwind", "TypeScript", "Vercel"]
+      },
+      {
+        "id": 2,
+        "description": "Co-developed the frontend of the Nuve Platform.",
+        "skills": [
+          "Next.js",
+          "React",
+          "Tailwind",
+          "TypeScript",
+          "Vercel",
+          "Zustand"
+        ]
+      },
+      {
+        "id": 3,
+        "description": "Assisted in building and maintaining API routes and logic.",
+        "skills": ["FastAPI", "Python", "SQL"]
+      }
+    ],
+    "minorTasks": [
+      {
+        "id": 1,
+        "description": "Integrated cloud APIs to manage instances using Python scripts.",
+        "skills": ["AWS", "Azure", "GCP"]
+      },
+      {
+        "id": 2,
+        "description": "Analyzed user behavior with PostHog and Google Analytics.",
+        "skills": ["Google Analytics", "PostHog"]
+      },
+      {
+        "id": 3,
+        "description": "Edited marketing-related videos.",
+        "skills": ["CapCut"]
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Application Developer",
+    "company": "10xCoding",
+    "dates": "Feb 2019 - Jun 2021",
+    "mainTasks": [
+      {
+        "id": 1,
+        "description": "Built nine SAP Cloud Platform applications for customers.",
+        "skills": [
+          "JavaScript",
+          "OData",
+          "SAP Cloud Platform",
+          "SAP Gateway",
+          "SAPUI5"
+        ]
+      },
+      {
+        "id": 2,
+        "description": "Developed a time-tracking app with PTO, leave logging, workflows, and expense reimbursement for internal use.",
+        "skills": [
+          "HANA",
+          "JavaScript",
+          "OData",
+          "SAP Cloud Platform",
+          "SAPUI5"
+        ]
+      }
+    ],
+    "minorTasks": [
+      {
+        "id": 1,
+        "description": "Implemented CRUD operations for sales documents with advanced search and email integration.",
+        "skills": [
+          "JavaScript",
+          "OData",
+          "SAP Cloud Platform",
+          "SAP Gateway",
+          "SAPUI5"
+        ]
+      },
+      {
+        "id": 2,
+        "description": "Collaborated with backend teams to optimize OData-based data transfer from ECC systems.",
+        "skills": [
+          "ABAP",
+          "JavaScript",
+          "OData",
+          "SAP Cloud Platform",
+          "SAP Gateway",
+          "SAP GUI",
+          "SAPUI5"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Application Developer Intern",
+    "company": "10xCoding",
+    "dates": "Jun 2018 - Dec 2018",
+    "mainTasks": [
+      {
+        "id": 1,
+        "description": "Built a T-Code lookup Fiori app.",
+        "skills": [
+          "ABAP",
+          "JavaScript",
+          "OData",
+          "SAP Cloud Platform",
+          "SAP GUI",
+          "SAPUI5"
+        ]
+      }
+    ]
+  }
+]
