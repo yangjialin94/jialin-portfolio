@@ -1,16 +1,20 @@
 [
   {
     "id": 1,
-    "title": "Project One",
-    "description": "A cool project about X.",
-    "image": "/images/project-one.jpg",
-    "link": "https://github.com/yourusername/project-one"
-  },
-  {
-    "id": 2,
-    "title": "Project Two",
-    "description": "Another awesome project about Y.",
-    "image": "/images/project-two.jpg",
-    "link": "https://yourwebsite.com/project-two"
+    "title": "Portfolio Website",
+    "description": "Portfolio website for myself.",
+    "image": "/images/portfolio-website.png",
+    "github": "https://github.com/yangjialin94/jialin-portfolio",
+    "tools": {
+      "frontend": [
+        "Motion",
+        "Next.js",
+        "React",
+        "Tailwind",
+        "TypeScript",
+        "Vercel"
+      ],
+      "backend": []
+    }
   }
 ]

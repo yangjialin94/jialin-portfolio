@@ -1,44 +1,47 @@
 'use client';
 
+import { motion } from 'framer-motion';
 import React from 'react';
 
 import Footer from '@/components/footer';
 // import projects from '@/data/projects.json';
 
+const ComingSoon = () => {
+  return (
+    <div className="relative h-16 w-full max-w-4xl overflow-hidden">
+      <motion.div
+        className="whitespace-nowrap text-2xl font-bold"
+        initial={{ x: '100%' }}
+        animate={{ x: '-100%' }}
+        transition={{
+          repeat: Infinity,
+          duration: 10,
+          ease: 'linear',
+        }}
+      >
+        🚀 Coming Soon
+      </motion.div>
+    </div>
+  );
+};
+
 export default function Projects() {
   return (
     <>
       {/* Main */}
-      <main className="flex flex-1 flex-col items-start justify-center gap-10 px-8 py-10 sm:px-8 sm:pb-20 md:px-16 lg:px-20">
-        {/* Heading */}
-        <h2 className="text-2xl font-bold">My Projects</h2>
+      <main className="flex flex-1 flex-col items-center justify-center gap-10 px-6 py-10 sm:px-8 sm:pb-20 md:px-16 lg:px-20">
+        <h1 className="my-4 text-center text-4xl font-bold text-gray-900 dark:text-gray-100 md:my-12">
+          My Projects
+        </h1>
 
-        {/* Projects */}
-        <div className="mt-4 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {/* {projects.map((project) => (
-          <div key={project.id} className="p-4 border rounded-lg shadow">
-            <img
-              src={project.image}
-              alt={project.title}
-              className="w-full h-48 object-cover rounded-md"
-            />
-            <h3 className="mt-2 text-lg font-semibold">{project.title}</h3>
-            <p className="mt-1 text-gray-600">{project.description}</p>
-            <a
-              href={project.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block mt-2 text-blue-500 hover:underline"
-            >
-              View Project
-            </a>
-          </div>
-        ))} */}
-        </div>
+        <ComingSoon />
+        <ComingSoon />
+        <ComingSoon />
+        <ComingSoon />
       </main>
 
       {/* Footer */}
-      <Footer page="Projects" />
+      <Footer page="Experiences" />
     </>
   );
 }
