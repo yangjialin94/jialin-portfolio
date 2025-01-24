@@ -62,13 +62,7 @@ interface CardProps {
 
 const Card = ({ experience }: CardProps) => {
   return (
-    <motion.div
-      key={experience.id}
-      initial={{ opacity: 0, y: 50 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5 }}
-      className="transform rounded-xl border border-gray-200 bg-white p-8 transition-all duration-300 hover:shadow-xl dark:border-gray-700 dark:bg-gray-800 dark:hover:shadow-md dark:hover:shadow-white"
-    >
+    <div className="transform rounded-xl border border-gray-200 bg-white p-8 transition-all duration-300 hover:shadow-xl dark:border-gray-700 dark:bg-gray-800 dark:hover:shadow-md dark:hover:shadow-white">
       <div className="mb-4 flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
         <h2 className="text-2xl font-semibold text-black dark:text-white">
           {experience.title}
@@ -121,11 +115,26 @@ const Card = ({ experience }: CardProps) => {
           </ul>
         </details>
       )}
-    </motion.div>
+    </div>
   );
 };
 
 export default function Experiences() {
+  const containerVariants = {
+    hidden: { opacity: 1 },
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.3, // Delays child animations by 0.3s
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 50 },
+    show: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+  };
+
   return (
     <>
       {/* Main */}
@@ -133,11 +142,22 @@ export default function Experiences() {
         <h1 className="my-4 text-center text-4xl font-bold text-gray-900 dark:text-gray-100 md:my-12">
           Professional Experiences
         </h1>
-        <div className="w-full max-w-4xl space-y-10">
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          animate="show"
+          className="w-full max-w-4xl space-y-10"
+        >
           {experiences.map((experience: Experience) => (
-            <Card key={experience.id} experience={experience} />
+            <motion.div
+              key={experience.id}
+              variants={itemVariants}
+              className="w-full"
+            >
+              <Card experience={experience} />
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </main>
 
       {/* Footer */}
