@@ -41,7 +41,7 @@ export default function Projects() {
       </main>
 
       {/* Footer */}
-      <Footer page="Experiences" />
+      <Footer page="Projects" />
     </>
   );
 }
