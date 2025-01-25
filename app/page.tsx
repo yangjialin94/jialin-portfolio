@@ -61,7 +61,7 @@ const Stats = () => {
     <div className="mt-8 flex flex-col gap-6 sm:mt-12 sm:gap-8">
       <ListItem
         number="10+"
-        text="Professional Projects Delivered"
+        text="Professional Applications Delivered"
         delay={0.5}
         borderColor="border-blue-400"
       />
