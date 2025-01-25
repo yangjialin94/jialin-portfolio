@@ -1,7 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
-import ReCAPTCHA from 'react-google-recaptcha';
+import React, { useState, useEffect } from 'react';
 import { useForm, SubmitHandler } from 'react-hook-form';
 
 import Footer from '@/components/footer';
@@ -20,43 +19,47 @@ const ContactForm = () => {
   } = useForm<FormValues>();
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
-  const [recaptchaToken, setRecaptchaToken] = useState<string | null>(null);
-  const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
-  const recaptchaKey = process.env.NEXT_PUBLIC_RECAPTCHA_KEY || '';
-
-  if (!recaptchaKey) {
-    console.error(
-      'Missing NEXT_PUBLIC_RECAPTCHA_KEY in environment variables.'
-    );
-    return <p>Configuration error: reCAPTCHA key is missing.</p>;
-  }
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.src = `https://www.google.com/recaptcha/api.js?render=${process.env.NEXT_PUBLIC_RECAPTCHA_KEY}`;
+    script.async = true;
+    document.body.appendChild(script);
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
 
   const onSubmit: SubmitHandler<FormValues> = async (data) => {
-    if (!recaptchaToken) {
-      setErrorMessage('Please complete the reCAPTCHA.');
-      return;
-    }
-
     setLoading(true);
-    setErrorMessage(null);
 
     try {
+      const token = await new Promise<string>((resolve) => {
+        window.grecaptcha.ready(() => {
+          window.grecaptcha
+            .execute(process.env.NEXT_PUBLIC_RECAPTCHA_KEY || '', {
+              action: 'submit',
+            })
+            .then(resolve);
+        });
+      });
+
       const response = await fetch('https://formspree.io/f/xeoeoklz', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ ...data, recaptchaToken }),
+        body: JSON.stringify({ ...data, 'g-recaptcha-response': token }),
       });
 
       if (response.ok) {
         setIsSubmitted(true);
       } else {
-        throw new Error('Failed to send message.');
+        throw new Error('Failed to submit the form.');
       }
     } catch (error) {
-      setErrorMessage(`Something went wrong: ${error}`);
+      console.error(error);
+      alert('Something went wrong. Please try again.');
     } finally {
       setLoading(false);
     }
@@ -130,18 +133,6 @@ const ContactForm = () => {
                 </p>
               )}
             </div>
-
-            <div className="mt-4 flex w-full flex-col items-center">
-              <ReCAPTCHA
-                sitekey={recaptchaKey}
-                onChange={(token) => setRecaptchaToken(token)}
-                onExpired={() => setRecaptchaToken(null)}
-              />
-            </div>
-
-            {errorMessage && (
-              <p className="text-sm text-red-500">{errorMessage}</p>
-            )}
 
             <button
               type="submit"
