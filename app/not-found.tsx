@@ -50,7 +50,7 @@ export default function NotFound() {
       </main>
 
       {/* Footer */}
-      <Footer page="Experiences" />
+      <Footer page="" />
     </>
   );
 }
