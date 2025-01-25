@@ -91,7 +91,7 @@ const DownloadResume = () => {
       rel="noopener noreferrer"
       aria-label="Download Jialin's Resume as a PDF"
     >
-      <ArrowDownTrayIcon className="h-5 w-5 sm:h-6 sm:w-6" />
+      <ArrowDownTrayIcon className="h-5 w-5 animate-bounce sm:h-6 sm:w-6" />
       Download Resume
     </motion.a>
   );
