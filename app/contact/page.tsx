@@ -19,10 +19,10 @@ const ContactForm = () => {
   } = useForm<FormValues>();
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const formEndpoint = process.env.NEXT_PUBLIC_FORMSPREE_ENDPOINT || '';
+  const recaptchaKey = process.env.NEXT_PUBLIC_RECAPTCHA_KEY || '';
 
   const onSubmit: SubmitHandler<FormValues> = async (data) => {
-    const response = await fetch(formEndpoint, {
+    const response = await fetch('https://formspree.io/f/xeoeoklz', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -93,6 +93,9 @@ const ContactForm = () => {
                 <p className="text-sm text-red-500">{errors.message.message}</p>
               )}
             </div>
+
+            {/* reCAPTCHA */}
+            <div className="g-recaptcha" data-sitekey={recaptchaKey}></div>
 
             {/* Submit Button */}
             <button
