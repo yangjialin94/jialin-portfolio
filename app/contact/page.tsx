@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import ReCAPTCHA from 'react-google-recaptcha';
 import { useForm, SubmitHandler } from 'react-hook-form';
 
 import Footer from '@/components/footer';
@@ -18,22 +19,46 @@ const ContactForm = () => {
     formState: { errors },
   } = useForm<FormValues>();
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [recaptchaToken, setRecaptchaToken] = useState<string | null>(null);
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
   const recaptchaKey = process.env.NEXT_PUBLIC_RECAPTCHA_KEY || '';
 
-  const onSubmit: SubmitHandler<FormValues> = async (data) => {
-    const response = await fetch('https://formspree.io/f/xeoeoklz', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(data),
-    });
+  if (!recaptchaKey) {
+    console.error(
+      'Missing NEXT_PUBLIC_RECAPTCHA_KEY in environment variables.'
+    );
+    return <p>Configuration error: reCAPTCHA key is missing.</p>;
+  }
 
-    if (response.ok) {
-      setIsSubmitted(true);
-    } else {
-      alert('Something went wrong. Please try again.');
+  const onSubmit: SubmitHandler<FormValues> = async (data) => {
+    if (!recaptchaToken) {
+      setErrorMessage('Please complete the reCAPTCHA.');
+      return;
+    }
+
+    setLoading(true);
+    setErrorMessage(null);
+
+    try {
+      const response = await fetch('https://formspree.io/f/xeoeoklz', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ ...data, recaptchaToken }),
+      });
+
+      if (response.ok) {
+        setIsSubmitted(true);
+      } else {
+        throw new Error('Failed to send message.');
+      }
+    } catch (error) {
+      setErrorMessage(`Something went wrong: ${error}`);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -48,20 +73,21 @@ const ContactForm = () => {
         ) : (
           <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
             <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
-              {/* Name Field */}
               <div>
                 <input
                   {...register('name', { required: 'Name is required' })}
                   type="text"
                   placeholder="Your Name"
                   className="w-full rounded-lg border border-gray-300 bg-gray-50 p-3 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:border-gray-700 dark:bg-gray-700 dark:placeholder-gray-400 dark:focus:ring-blue-400"
+                  aria-describedby="name-error"
                 />
                 {errors.name && (
-                  <p className="text-sm text-red-500">{errors.name.message}</p>
+                  <p id="name-error" className="text-sm text-red-500">
+                    {errors.name.message}
+                  </p>
                 )}
               </div>
 
-              {/* Email Field */}
               <div>
                 <input
                   {...register('email', {
@@ -74,35 +100,59 @@ const ContactForm = () => {
                   type="email"
                   placeholder="Your Email"
                   className="w-full rounded-lg border border-gray-300 bg-gray-50 p-3 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:border-gray-700 dark:bg-gray-700 dark:placeholder-gray-400 dark:focus:ring-blue-400"
+                  aria-describedby="email-error"
                 />
                 {errors.email && (
-                  <p className="text-sm text-red-500">{errors.email.message}</p>
+                  <p id="email-error" className="text-sm text-red-500">
+                    {errors.email.message}
+                  </p>
                 )}
               </div>
             </div>
 
-            {/* Message Field */}
             <div>
               <textarea
-                {...register('message', { required: 'Message is required' })}
+                {...register('message', {
+                  required: 'Message is required',
+                  minLength: {
+                    value: 10,
+                    message: 'Message must be at least 10 characters long.',
+                  },
+                })}
                 placeholder="Your Message"
-                className="w-full rounded-lg border border-gray-300 bg-gray-50 p-3 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:border-gray-700 dark:bg-gray-700 dark:placeholder-gray-400 dark:focus:ring-blue-400"
                 rows={5}
+                className="w-full rounded-lg border border-gray-300 bg-gray-50 p-3 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:border-gray-700 dark:bg-gray-700 dark:placeholder-gray-400 dark:focus:ring-blue-400"
+                aria-describedby="message-error"
               />
               {errors.message && (
-                <p className="text-sm text-red-500">{errors.message.message}</p>
+                <p id="message-error" className="text-sm text-red-500">
+                  {errors.message.message}
+                </p>
               )}
             </div>
 
-            {/* reCAPTCHA */}
-            <div className="g-recaptcha" data-sitekey={recaptchaKey}></div>
+            <div className="mt-4 flex w-full flex-col items-center">
+              <ReCAPTCHA
+                sitekey={recaptchaKey}
+                onChange={(token) => setRecaptchaToken(token)}
+                onExpired={() => setRecaptchaToken(null)}
+              />
+            </div>
 
-            {/* Submit Button */}
+            {errorMessage && (
+              <p className="text-sm text-red-500">{errorMessage}</p>
+            )}
+
             <button
               type="submit"
-              className="w-full rounded-lg bg-blue-600 p-3 text-white transition duration-300 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600"
+              className={`w-full rounded-lg p-3 text-white ${
+                loading
+                  ? 'cursor-not-allowed bg-gray-400'
+                  : 'bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600'
+              }`}
+              disabled={loading}
             >
-              Send Message
+              {loading ? 'Sending...' : 'Send Message'}
             </button>
           </form>
         )}
