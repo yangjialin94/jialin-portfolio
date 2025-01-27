@@ -78,17 +78,27 @@ const Footer = ({ page }: FooterProps) => {
   return (
     <footer className="bg-gray-100 py-6 dark:bg-gray-800">
       <div className="mx-auto flex items-center justify-center gap-4 sm:gap-6">
-        {tabs
-          .filter((tab) => tab.text !== page)
-          .map(({ text, href, hoverColor, Icon }) => (
-            <Tab
-              key={text}
-              text={text}
-              href={href}
-              hoverColor={hoverColor}
-              Icon={Icon}
-            />
-          ))}
+        {page === '404' ? (
+          <Tab
+            key="Home"
+            text="Home"
+            href="/"
+            hoverColor="red"
+            Icon={HomeIcon}
+          />
+        ) : (
+          tabs
+            .filter((tab) => tab.text !== page)
+            .map(({ text, href, hoverColor, Icon }) => (
+              <Tab
+                key={text}
+                text={text}
+                href={href}
+                hoverColor={hoverColor}
+                Icon={Icon}
+              />
+            ))
+        )}
       </div>
     </footer>
   );
