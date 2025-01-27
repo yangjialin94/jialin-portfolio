@@ -15,8 +15,8 @@ export const metadata = {
     images: [
       {
         url: 'https://jialinyang.com/images/jialin-122324.jpg',
-        width: 800,
-        height: 800,
+        width: 1200,
+        height: 630,
         alt: 'Jialin Yang holding a cup of coffee with a cheerful expression.',
       },
     ],
