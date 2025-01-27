@@ -14,7 +14,7 @@ export const metadata = {
     siteName: "Jialin Yang's Portfolio",
     images: [
       {
-        url: 'https://jialinyang.com/images/jialin_122324.jpg',
+        url: 'https://jialinyang.com/images/jialin-122324.jpg',
         width: 800,
         height: 800,
         alt: 'Jialin Yang holding a cup of coffee with a cheerful expression.',
@@ -28,7 +28,7 @@ export const metadata = {
     title: "Jialin Yang's Portfolio",
     description:
       'Explore the projects, skills, and achievements of Jialin Yang.',
-    images: ['https://jialinyang.com/images/jialin_122324.jpg'],
+    images: ['https://jialinyang.com/images/jialin-122324.jpg'],
   },
 };
 
