@@ -32,8 +32,8 @@
     "minorTasks": [
       {
         "id": 1,
-        "description": "Integrated cloud APIs to manage instances using Python scripts.",
-        "skills": ["AWS", "Azure", "GCP"]
+        "description": "Integrated cloud APIs to manage instances using Python.",
+        "skills": ["AWS", "Azure", "GCP", "Python"]
       },
       {
         "id": 2,
