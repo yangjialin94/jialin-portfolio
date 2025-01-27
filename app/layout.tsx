@@ -6,6 +6,9 @@ import ThemeSwitcher from '@/components/theme-switcher';
 export const metadata = {
   title: "Jialin Yang's Portfolio",
   description: 'Explore the projects, skills, and achievements of Jialin Yang.',
+  icons: {
+    icon: '/favicon.ico',
+  },
   openGraph: {
     title: "Jialin Yang's Portfolio",
     description:
