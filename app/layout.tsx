@@ -1,4 +1,5 @@
 import '@/styles/globals.css';
+import { Analytics } from '@vercel/analytics/react';
 import { ThemeProvider } from 'next-themes';
 
 import ThemeSwitcher from '@/components/theme-switcher';
@@ -47,6 +48,8 @@ export default function RootLayout({
           {children}
           <ThemeSwitcher />
         </ThemeProvider>
+
+        <Analytics />
       </body>
     </html>
   );
