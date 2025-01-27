@@ -1,36 +1,34 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Jialin Portfolio
 
-## Getting Started
+Welcome to my portfolio project! This is a showcase of my work and skills as a developer, built with a modern tech stack to ensure a fast, responsive, and visually appealing experience.
 
-First, run the development server:
+## 🌟 Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Dark Mode**: Seamlessly switch between light and dark themes with `next-themes`.
+- **Smooth Animations**: Enhanced user experience with animations powered by `motion`.
+- **Form Handling**: Simplified form validation and management using `react-hook-form`.
+- **Optimized Performance**: Built using Next.js's latest Turbopack for blazing-fast builds and performance.
+- **Responsive Design**: Styled with Tailwind CSS for a clean and adaptable layout on any device.
+- **Deployed on Vercel**: Leveraging the power of Vercel for smooth and reliable deployment.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🔧 Tech Stack
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Frontend
 
-## Learn More
+- **[Next.js](https://nextjs.org/)**: React-based framework for fast server-rendered and static web applications.
+- **[React](https://reactjs.org/)**: A library for building dynamic and interactive user interfaces.
+- **[Tailwind CSS](https://tailwindcss.com/)**: Utility-first CSS framework for rapid UI development.
+- **[Motion](https://github.com/framer/motion)**: A library for animations to create smooth transitions and interactive elements.
+- **[React Hook Form](https://react-hook-form.com/)**: Lightweight library for form validation and state management.
+- **[Headless UI](https://headlessui.dev/)** & **[Heroicons](https://heroicons.com/)**: Ready-to-use accessible components and icons.
 
-To learn more about Next.js, take a look at the following resources:
+### Development Tools
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **[TypeScript](https://www.typescriptlang.org/)**: Static typing to catch errors early and improve code quality.
+- **[ESLint](https://eslint.org/)** & **[Prettier](https://prettier.io/)**: Code linting and formatting to maintain a clean and consistent codebase.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Deployment
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **[Vercel](https://vercel.com/)**: Hosting and deploying the portfolio with automatic builds and CDN for global performance.
