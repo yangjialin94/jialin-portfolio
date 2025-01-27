@@ -11,8 +11,6 @@ Welcome to my portfolio project! This is a showcase of my work and skills as a d
 - **Responsive Design**: Styled with Tailwind CSS for a clean and adaptable layout on any device.
 - **Deployed on Vercel**: Leveraging the power of Vercel for smooth and reliable deployment.
 
----
-
 ## 🔧 Tech Stack
 
 ### Frontend
