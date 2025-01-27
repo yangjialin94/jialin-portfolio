@@ -1,15 +1,9 @@
-import type { Metadata } from 'next';
-import { Geist } from 'next/font/google';
 import '@/styles/globals.css';
+import { ThemeProvider } from 'next-themes';
 
 import ThemeSwitcher from '@/components/theme-switcher';
 
-const geistSans = Geist({
-  variable: '--font-geist-sans',
-  subsets: ['latin'],
-});
-
-export const metadata: Metadata = {
+export const metadata = {
   title: "Jialin Yang's Portfolio",
   description: 'Explore the projects, skills, and achievements of Jialin Yang.',
   openGraph: {
@@ -40,19 +34,16 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} flex min-h-screen flex-col bg-gray-50 text-gray-900 antialiased dark:bg-gray-900 dark:text-gray-100`}
-      >
-        {/* Content */}
-        {children}
-
-        {/* Theme */}
-        <ThemeSwitcher />
+      <body className="flex min-h-screen flex-col bg-gray-50 text-gray-900 antialiased dark:bg-gray-900 dark:text-gray-100">
+        <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
+          {children}
+          <ThemeSwitcher />
+        </ThemeProvider>
       </body>
     </html>
   );
