@@ -52,6 +52,8 @@ export default function ExperiencesPage() {
   };
 
   return (
+    // TODO: Try this later
+    // <div className="h-full flex flex-col lg:flex-row gap-12">
     <div className="flex max-h-[calc(100vh-120px)] flex-col gap-12 sm:max-h-[calc(100vh-200px)] lg:flex-row lg:justify-between">
       {/* Navigation */}
       <div className="flex w-full flex-col items-center lg:items-start">
