@@ -8,8 +8,8 @@ import {
   HomeIcon,
 } from "@heroicons/react/24/solid";
 import { motion } from "motion/react";
-import Image from "next/image";
 import React from "react";
+import { FiLinkedin } from "react-icons/fi";
 
 import { raleway800 } from "@/styles/fonts";
 
@@ -38,6 +38,7 @@ interface SideBarProps {
 
 interface TabProps {
   href: string;
+  newPage?: boolean;
   children: React.ReactNode;
 }
 
@@ -55,8 +56,8 @@ const SideBar = ({ page }: SideBarProps) => {
       ))}
 
       {/* LinkedIn Tab */}
-      <Tab href="https://www.linkedin.com/in/jialin-yang-jy/">
-        <Image src="/images/linkedin-logo.svg" alt="LinkedIn Logo" width={20} height={20} />
+      <Tab href="https://www.linkedin.com/in/jialin-yang-jy/" newPage={true}>
+        <FiLinkedin className="h-5 w-5" />
         LinkedIn
       </Tab>
 
@@ -79,8 +80,24 @@ const SideBar = ({ page }: SideBarProps) => {
   );
 };
 
-const Tab = ({ href, children }: TabProps) => {
+const Tab = ({ href, newPage = false, children }: TabProps) => {
   const tabClassName = `${raleway800.className} text-md flex items-center gap-4 hover:text-blue-500`;
+
+  if (newPage) {
+    return (
+      <motion.a
+        whileHover={{
+          transition: { duration: 0.2, ease: "easeOut" },
+        }}
+        className={tabClassName}
+        target="_blank"
+        rel="noopener noreferrer"
+        href={href}
+      >
+        {children}
+      </motion.a>
+    );
+  }
 
   return (
     <motion.a
@@ -88,8 +105,6 @@ const Tab = ({ href, children }: TabProps) => {
         transition: { duration: 0.2, ease: "easeOut" },
       }}
       className={tabClassName}
-      target="_blank"
-      rel="noopener noreferrer"
       href={href}
     >
       {children}

@@ -30,7 +30,7 @@ const Card = ({ data }: CardProps) => {
           >
             <Link href={data.website} target="_blank" rel="noopener noreferrer">
               <h2
-                className={`${raleway800.className} text-xl hover:border-blue-500 hover:text-blue-500 dark:border-gray-200 dark:hover:border-blue-500 dark:hover:text-blue-500 sm:text-2xl`}
+                className={`${raleway800.className} text-xl hover:text-blue-500 dark:hover:text-blue-500 sm:text-2xl`}
               >
                 {data.title}
               </h2>

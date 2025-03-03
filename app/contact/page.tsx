@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
 
 import SideBar from "@/components/SideBar";
-import { audiowide, raleway800 } from "@/styles/fonts";
+import { audiowide, raleway600, raleway800 } from "@/styles/fonts";
 
 type FormValues = {
   name: string;
@@ -88,21 +88,25 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="w-full rounded-lg bg-white p-4 dark:bg-gray-800 dark:text-gray-200 sm:p-8">
+    <div
+      className={`${raleway600.className} w-full rounded-lg border-2 border-gray-500 p-4 sm:p-8`}
+    >
       {isSubmitted ? (
         <div className="text-center">
           <h2 className={`${raleway800.className} text-2xl`}>Thank you!</h2>
           <p>I&apos;ll get back to you shortly.</p>
         </div>
       ) : (
+        // Form
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
           <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+            {/* Name */}
             <div>
               <input
                 {...register("name", { required: "Name is required" })}
                 type="text"
-                placeholder="Your Name"
-                className="w-full rounded-lg border border-gray-300 bg-gray-50 p-3 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:border-gray-700 dark:bg-gray-700 dark:placeholder-gray-400 dark:focus:ring-blue-400"
+                placeholder="Name"
+                className="w-full rounded-lg border-2 border-gray-500 bg-transparent p-3 focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-500"
                 aria-describedby="name-error"
               />
               {errors.name && (
@@ -112,6 +116,7 @@ const ContactForm = () => {
               )}
             </div>
 
+            {/* Email */}
             <div>
               <input
                 {...register("email", {
@@ -122,8 +127,8 @@ const ContactForm = () => {
                   },
                 })}
                 type="email"
-                placeholder="Your Email"
-                className="w-full rounded-lg border border-gray-300 bg-gray-50 p-3 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:border-gray-700 dark:bg-gray-700 dark:placeholder-gray-400 dark:focus:ring-blue-400"
+                placeholder="Email"
+                className="w-full rounded-lg border-2 border-gray-500 bg-transparent p-3 focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-500"
                 aria-describedby="email-error"
               />
               {errors.email && (
@@ -134,6 +139,7 @@ const ContactForm = () => {
             </div>
           </div>
 
+          {/* Message */}
           <div>
             <textarea
               {...register("message", {
@@ -143,9 +149,9 @@ const ContactForm = () => {
                   message: "Message must be at least 10 characters long.",
                 },
               })}
-              placeholder="Your Message"
+              placeholder="Message"
               rows={5}
-              className="w-full rounded-lg border border-gray-300 bg-gray-50 p-3 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:border-gray-700 dark:bg-gray-700 dark:placeholder-gray-400 dark:focus:ring-blue-400"
+              className="w-full rounded-lg border-2 border-gray-500 bg-transparent p-3 focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-500"
               aria-describedby="message-error"
             />
             {errors.message && (
@@ -155,12 +161,13 @@ const ContactForm = () => {
             )}
           </div>
 
+          {/* Submit */}
           <button
             type="submit"
-            className={`w-full rounded-lg p-3 text-white ${
+            className={`${raleway800.className} w-full rounded-lg p-3 text-gray-200 dark:text-gray-800 ${
               loading
-                ? "cursor-not-allowed bg-gray-400"
-                : "bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600"
+                ? "cursor-not-allowed"
+                : "bg-gray-800 hover:bg-blue-500 dark:bg-gray-200 dark:hover:bg-blue-500"
             }`}
             disabled={loading}
           >
