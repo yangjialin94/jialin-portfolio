@@ -1,14 +1,14 @@
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
-import Image from 'next/image';
-import Link from 'next/link';
-import React from 'react';
+import { motion } from "framer-motion";
+import Image from "next/image";
+import Link from "next/link";
+import React from "react";
 
-import Bullet from '@/components/Bullet';
-import SideBar from '@/components/SideBar';
-import experiences from '@/data/experiences.json';
-import { raleway600, hennyPenny, raleway800 } from '@/styles/fonts';
+import Bullet from "@/components/Bullet";
+import SideBar from "@/components/SideBar";
+import experiences from "@/data/experiences.json";
+import { hennyPenny, raleway600, raleway800 } from "@/styles/fonts";
 
 interface Task {
   id: number;
@@ -32,7 +32,7 @@ interface CardProps {
 
 interface TaskProps {
   task: Task;
-  bulletColor: 'red' | 'blue' | 'green' | 'yellow';
+  bulletColor: "red" | "blue" | "green" | "yellow";
 }
 
 export default function ExperiencesPage() {
@@ -57,11 +57,7 @@ export default function ExperiencesPage() {
     <div className="flex max-h-[calc(100vh-120px)] flex-col gap-12 sm:max-h-[calc(100vh-200px)] lg:flex-row lg:justify-between">
       {/* Navigation */}
       <div className="flex w-full flex-col items-center lg:items-start">
-        <h1
-          className={`${hennyPenny.className} text-3xl font-bold sm:text-5xl`}
-        >
-          Experiences
-        </h1>
+        <h1 className={`${hennyPenny.className} text-3xl font-bold sm:text-5xl`}>Experiences</h1>
 
         {/* Navigation */}
         <div className="mb-0 mt-10 sm:mb-10 sm:mt-20">
@@ -93,9 +89,7 @@ const Card = ({ experience }: CardProps) => {
     >
       {/* Title */}
       <div className="mb-4 flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
-        <h2
-          className={`${raleway800.className} text-xl font-semibold sm:text-2xl`}
-        >
+        <h2 className={`${raleway800.className} text-xl font-semibold sm:text-2xl`}>
           {experience.title}
         </h2>
         {experience.website ? (
@@ -123,9 +117,7 @@ const Card = ({ experience }: CardProps) => {
             </motion.div>
           </Link>
         ) : (
-          <span className="text-xl font-bold text-red-600">
-            {experience.company}
-          </span>
+          <span className="text-xl font-bold text-red-600">{experience.company}</span>
         )}
       </div>
 
@@ -142,9 +134,7 @@ const Card = ({ experience }: CardProps) => {
       {/* Minor Tasks */}
       {experience.minorTasks && (
         <details className="mt-8">
-          <summary
-            className={`${raleway800.className} cursor-pointer hover:text-green-500`}
-          >
+          <summary className={`${raleway800.className} cursor-pointer hover:text-green-500`}>
             Show More
           </summary>
           <ul className="mt-8 space-y-3">
@@ -160,10 +150,10 @@ const Card = ({ experience }: CardProps) => {
 
 const Task = ({ task, bulletColor }: TaskProps) => {
   const borderColorClassName = {
-    red: 'border-red-500',
-    blue: 'border-blue-500',
-    green: 'border-green-500',
-    yellow: 'border-yellow-500',
+    red: "border-red-500",
+    blue: "border-blue-500",
+    green: "border-green-500",
+    yellow: "border-yellow-500",
   }[bulletColor];
 
   return (

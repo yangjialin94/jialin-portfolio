@@ -1,10 +1,10 @@
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
-import React from 'react';
+import { motion } from "framer-motion";
+import React from "react";
 
-import SideBar from '@/components/SideBar';
-import { raleway600, hennyPenny } from '@/styles/fonts';
+import SideBar from "@/components/SideBar";
+import { hennyPenny, raleway600 } from "@/styles/fonts";
 
 export default function NotFound() {
   return (
@@ -12,15 +12,13 @@ export default function NotFound() {
       {/* Top Left Corner */}
       <motion.div
         animate={{ opacity: [0, 1], y: [20, 0] }}
-        transition={{ duration: 1, easing: 'ease-in-out' }}
+        transition={{ duration: 1, easing: "ease-in-out" }}
         className="text-left"
       >
         <h1 className={`${hennyPenny.className} text-5xl`}>
           Jialin Yang <br />
         </h1>
-        <p className={`${raleway600.className} text-md mt-4`}>
-          Software Engineer
-        </p>
+        <p className={`${raleway600.className} text-md mt-4`}>Software Engineer</p>
       </motion.div>
 
       {/* Navigation */}
@@ -38,7 +36,7 @@ export default function NotFound() {
           rotate: 15,
         }}
         transition={{
-          type: 'spring',
+          type: "spring",
           stiffness: 300,
           damping: 20,
         }}
@@ -49,13 +47,12 @@ export default function NotFound() {
       {/* Bottom Right Corner */}
       <motion.div
         animate={{ opacity: [0, 1], y: [20, 0] }}
-        transition={{ duration: 1, delay: 0.5, easing: 'ease-in-out' }}
+        transition={{ duration: 1, delay: 0.5, easing: "ease-in-out" }}
         className="absolute bottom-0 right-0 text-left sm:text-right"
       >
         <p className={`${raleway600.className} text-md p-12`}>
-          I can build full-stack web applications using Next.js and FastAPI,
-          integrating databases, state management, authentication, and seamless
-          API communication.
+          I can build full-stack web applications using Next.js and FastAPI, integrating databases,
+          state management, authentication, and seamless API communication.
         </p>
       </motion.div>
     </>

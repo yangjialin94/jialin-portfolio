@@ -1,6 +1,6 @@
 // vanta.fog.min.d.ts
-declare module 'vanta/dist/vanta.fog.min' {
-  import * as THREE from 'three';
+declare module "vanta/dist/vanta.fog.min" {
+  import * as THREE from "three";
 
   export interface VantaOptions {
     el: HTMLElement | null;

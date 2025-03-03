@@ -1,6 +1,7 @@
 node_modules
 .next
 out
-build
 public
-*.lock
+dist
+package-lock.json
+yarn.lock

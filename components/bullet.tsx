@@ -1,18 +1,18 @@
-'use client';
+"use client";
 
-import React from 'react';
+import React from "react";
 
 interface BulletProps {
-  color?: 'red' | 'blue' | 'green' | 'yellow';
+  color?: "red" | "blue" | "green" | "yellow";
   description: string;
 }
 
-const Bullet = ({ color = 'blue', description }: BulletProps) => {
+const Bullet = ({ color = "blue", description }: BulletProps) => {
   const colorClassName = {
-    red: 'bg-red-500',
-    blue: 'bg-blue-500',
-    green: 'bg-green-500',
-    yellow: 'bg-yellow-500',
+    red: "bg-red-500",
+    blue: "bg-blue-500",
+    green: "bg-green-500",
+    yellow: "bg-yellow-500",
   }[color];
 
   return (
@@ -21,9 +21,7 @@ const Bullet = ({ color = 'blue', description }: BulletProps) => {
       <div className={`min-h-2 min-w-2 rounded-full ${colorClassName}`} />
 
       {/* Description text stays aligned */}
-      <div className="leading-normal text-gray-800 dark:text-gray-300">
-        {description}
-      </div>
+      <div className="leading-normal text-gray-800 dark:text-gray-300">{description}</div>
     </div>
   );
 };

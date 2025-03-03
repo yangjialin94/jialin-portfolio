@@ -1,10 +1,10 @@
-'use client';
+"use client";
 
-import React, { useState, useEffect } from 'react';
-import { useForm, SubmitHandler } from 'react-hook-form';
+import React, { useEffect, useState } from "react";
+import { SubmitHandler, useForm } from "react-hook-form";
 
-import SideBar from '@/components/SideBar';
-import { hennyPenny, raleway800 } from '@/styles/fonts';
+import SideBar from "@/components/SideBar";
+import { hennyPenny, raleway800 } from "@/styles/fonts";
 
 type FormValues = {
   name: string;
@@ -17,9 +17,7 @@ export default function ContactPage() {
     <div className="flex max-h-[calc(100vh-120px)] flex-col gap-12 sm:h-full lg:flex-row lg:justify-between">
       {/* Navigation */}
       <div className="flex w-full flex-col items-center lg:items-start">
-        <h1
-          className={`${hennyPenny.className} text-3xl font-bold sm:text-5xl`}
-        >
+        <h1 className={`${hennyPenny.className} text-3xl font-bold sm:text-5xl`}>
           Leave a Message
         </h1>
 
@@ -47,7 +45,7 @@ const ContactForm = () => {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    const script = document.createElement('script');
+    const script = document.createElement("script");
     script.src = `https://www.google.com/recaptcha/api.js?render=${process.env.NEXT_PUBLIC_RECAPTCHA_KEY}`;
     script.async = true;
     document.body.appendChild(script);
@@ -63,29 +61,29 @@ const ContactForm = () => {
       const token = await new Promise<string>((resolve) => {
         window.grecaptcha.ready(() => {
           window.grecaptcha
-            .execute(process.env.NEXT_PUBLIC_RECAPTCHA_KEY || '', {
-              action: 'submit',
+            .execute(process.env.NEXT_PUBLIC_RECAPTCHA_KEY || "", {
+              action: "submit",
             })
             .then(resolve);
         });
       });
 
-      const response = await fetch('https://formspree.io/f/xeoeoklz', {
-        method: 'POST',
+      const response = await fetch("https://formspree.io/f/xeoeoklz", {
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
-        body: JSON.stringify({ ...data, 'g-recaptcha-response': token }),
+        body: JSON.stringify({ ...data, "g-recaptcha-response": token }),
       });
 
       if (response.ok) {
         setIsSubmitted(true);
       } else {
-        throw new Error('Failed to submit the form.');
+        throw new Error("Failed to submit the form.");
       }
     } catch (error) {
       console.error(error);
-      alert('Something went wrong. Please try again.');
+      alert("Something went wrong. Please try again.");
     } finally {
       setLoading(false);
     }
@@ -103,7 +101,7 @@ const ContactForm = () => {
           <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
             <div>
               <input
-                {...register('name', { required: 'Name is required' })}
+                {...register("name", { required: "Name is required" })}
                 type="text"
                 placeholder="Your Name"
                 className="w-full rounded-lg border border-gray-300 bg-gray-50 p-3 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:border-gray-700 dark:bg-gray-700 dark:placeholder-gray-400 dark:focus:ring-blue-400"
@@ -118,11 +116,11 @@ const ContactForm = () => {
 
             <div>
               <input
-                {...register('email', {
-                  required: 'Email is required',
+                {...register("email", {
+                  required: "Email is required",
                   pattern: {
                     value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
-                    message: 'Please enter a valid email address.',
+                    message: "Please enter a valid email address.",
                   },
                 })}
                 type="email"
@@ -140,11 +138,11 @@ const ContactForm = () => {
 
           <div>
             <textarea
-              {...register('message', {
-                required: 'Message is required',
+              {...register("message", {
+                required: "Message is required",
                 minLength: {
                   value: 10,
-                  message: 'Message must be at least 10 characters long.',
+                  message: "Message must be at least 10 characters long.",
                 },
               })}
               placeholder="Your Message"
@@ -163,12 +161,12 @@ const ContactForm = () => {
             type="submit"
             className={`w-full rounded-lg p-3 text-white ${
               loading
-                ? 'cursor-not-allowed bg-gray-400'
-                : 'bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600'
+                ? "cursor-not-allowed bg-gray-400"
+                : "bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600"
             }`}
             disabled={loading}
           >
-            {loading ? 'Sending...' : 'Send Message'}
+            {loading ? "Sending..." : "Send Message"}
           </button>
         </form>
       )}

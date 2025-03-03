@@ -1,32 +1,32 @@
-'use client';
+"use client";
 
 import {
   AcademicCapIcon,
+  ArrowDownTrayIcon,
   CodeBracketIcon,
   EnvelopeIcon,
-  ArrowDownTrayIcon,
   HomeIcon,
-} from '@heroicons/react/24/solid';
-import { motion } from 'motion/react';
-import React from 'react';
+} from "@heroicons/react/24/solid";
+import { motion } from "motion/react";
+import React from "react";
 
-import { raleway800 } from '@/styles/fonts';
+import { raleway800 } from "@/styles/fonts";
 
 const TABS = [
-  { text: 'Home', href: '/', Icon: HomeIcon },
+  { text: "Home", href: "/", Icon: HomeIcon },
   {
-    text: 'Experiences',
-    href: '/experiences',
+    text: "Experiences",
+    href: "/experiences",
     Icon: AcademicCapIcon,
   },
   {
-    text: 'Projects',
-    href: '/projects',
+    text: "Projects",
+    href: "/projects",
     Icon: CodeBracketIcon,
   },
   {
-    text: 'Contact',
-    href: '/contact',
+    text: "Contact",
+    href: "/contact",
     Icon: EnvelopeIcon,
   },
 ];
@@ -44,7 +44,7 @@ const SideBar = ({ page }: SideBarProps) => {
         <motion.a
           key={text}
           whileHover={{
-            transition: { duration: 0.2, ease: 'easeOut' },
+            transition: { duration: 0.2, ease: "easeOut" },
           }}
           className={tabClassName}
           href={href}
@@ -55,7 +55,7 @@ const SideBar = ({ page }: SideBarProps) => {
       ))}
       <motion.a
         whileHover={{
-          transition: { duration: 0.2, ease: 'easeOut' },
+          transition: { duration: 0.2, ease: "easeOut" },
         }}
         className={tabClassName}
         href="/files/Resume_022525.pdf"

@@ -1,9 +1,9 @@
-'use client';
+"use client";
 
-import { useTheme } from 'next-themes';
-import { useEffect, useRef } from 'react';
-import * as THREE from 'three';
-import VANTA from 'vanta/dist/vanta.fog.min';
+import { useTheme } from "next-themes";
+import { useEffect, useRef } from "react";
+import * as THREE from "three";
+import VANTA from "vanta/dist/vanta.fog.min";
 
 export default function VantaBackground() {
   const vantaRef = useRef<HTMLDivElement>(null);
@@ -15,7 +15,7 @@ export default function VantaBackground() {
       vantaEffect.current.destroy();
     }
 
-    const isDarkMode = resolvedTheme === 'dark';
+    const isDarkMode = resolvedTheme === "dark";
 
     vantaEffect.current = VANTA({
       el: vantaRef.current,
