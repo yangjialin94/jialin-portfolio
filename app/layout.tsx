@@ -2,7 +2,8 @@ import '@/styles/globals.css';
 import { Analytics } from '@vercel/analytics/react';
 import { ThemeProvider } from 'next-themes';
 
-import ThemeSwitcher from '@/components/theme-switcher';
+import ThemeSwitcher from '@/components/ThemeSwitcher';
+import VantaBackground from '@/components/VantaBackground';
 
 export const metadata = {
   title: "Jialin Yang's Portfolio",
@@ -43,12 +44,21 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className="flex min-h-screen flex-col bg-gray-50 text-gray-900 antialiased dark:bg-gray-900 dark:text-gray-100">
+      <body className="flex h-screen flex-col bg-gray-200 p-6 text-gray-800 antialiased dark:bg-gray-800 dark:text-gray-200 sm:p-12">
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
-          {children}
+          <main className="flex flex-1 rounded-lg border-2 border-gray-500">
+            <div className="relative flex-1 p-6 sm:p-12">
+              {/* Content */}
+              {children}
+
+              {/* Background */}
+              <div className="pointer-events-none absolute inset-0 overflow-hidden rounded-lg">
+                <VantaBackground />
+              </div>
+            </div>
+          </main>
           <ThemeSwitcher />
         </ThemeProvider>
-
         <Analytics />
       </body>
     </html>

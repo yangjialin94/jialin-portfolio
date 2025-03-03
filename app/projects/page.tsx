@@ -3,14 +3,37 @@
 import { motion } from 'framer-motion';
 import React from 'react';
 
-import Footer from '@/components/footer';
-// import projects from '@/data/projects.json';
+import SideBar from '@/components/SideBar';
+import { hennyPenny, raleway800 } from '@/styles/fonts';
+
+export default function ProjectsPage() {
+  return (
+    <>
+      {/* Navigation */}
+      <div className="flex w-full flex-col items-center lg:items-start">
+        <h1
+          className={`${hennyPenny.className} text-3xl font-bold sm:text-5xl`}
+        >
+          Projects
+        </h1>
+
+        {/* Navigation */}
+        <div className="mb-0 mt-10 sm:mb-10 sm:mt-20">
+          <SideBar page="Projects" />
+        </div>
+      </div>
+
+      {/* Projects List */}
+      <ComingSoon />
+    </>
+  );
+}
 
 const ComingSoon = () => {
   return (
-    <div className="relative h-16 w-full max-w-4xl overflow-hidden">
-      <motion.div
-        className="whitespace-nowrap text-2xl font-bold"
+    <div className="mt-40 w-full overflow-hidden">
+      <motion.p
+        className={`${raleway800.className} whitespace-nowrap text-2xl font-bold`}
         initial={{ x: '100%' }}
         animate={{ x: '-100%' }}
         transition={{
@@ -19,29 +42,8 @@ const ComingSoon = () => {
           ease: 'linear',
         }}
       >
-        🚀 Coming Soon
-      </motion.div>
+        Coming Soon...
+      </motion.p>
     </div>
   );
 };
-
-export default function Projects() {
-  return (
-    <>
-      {/* Main */}
-      <main className="flex flex-1 flex-col items-center justify-center gap-10 px-6 py-10 sm:px-8 sm:pb-20 md:px-16 lg:px-20">
-        <h1 className="my-4 text-center text-4xl font-bold text-gray-900 dark:text-gray-100 md:my-12">
-          My Projects
-        </h1>
-
-        <ComingSoon />
-        <ComingSoon />
-        <ComingSoon />
-        <ComingSoon />
-      </main>
-
-      {/* Footer */}
-      <Footer page="Projects" />
-    </>
-  );
-}

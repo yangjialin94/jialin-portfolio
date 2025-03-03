@@ -1,56 +1,63 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import Image from 'next/image';
 import React from 'react';
 
-import Footer from '@/components/footer';
+import SideBar from '@/components/SideBar';
+import { raleway600, hennyPenny } from '@/styles/fonts';
 
 export default function NotFound() {
   return (
     <>
-      {/* Main */}
-      <main className="flex flex-1 flex-col items-center justify-center gap-10 px-6 py-10 sm:px-8 sm:pb-20 md:px-16 lg:px-20">
-        <motion.div
-          className="relative h-48 w-48 overflow-hidden rounded-full"
-          animate={{
-            scale: [1, 1.6, 1],
-          }}
-          transition={{
-            repeat: Infinity,
-            duration: 2,
-            ease: 'easeInOut',
-          }}
-        >
-          <Image
-            src="/images/jialin-122324.jpg"
-            alt="Not Found Image"
-            layout="fill"
-            objectFit="cover"
-            quality={100}
-          />
-        </motion.div>
+      {/* Top Left Corner */}
+      <motion.div
+        animate={{ opacity: [0, 1], y: [20, 0] }}
+        transition={{ duration: 1, easing: 'ease-in-out' }}
+        className="text-left"
+      >
+        <h1 className={`${hennyPenny.className} text-5xl`}>
+          Jialin Yang <br />
+        </h1>
+        <p className={`${raleway600.className} text-md mt-4`}>
+          Software Engineer
+        </p>
+      </motion.div>
 
-        <motion.h1
-          className="my-4 text-center text-4xl font-bold text-gray-900 hover:text-red-500 dark:text-gray-100 dark:hover:text-red-500 md:my-12"
-          initial={{ scale: 1, rotate: 0 }}
-          animate={{ scale: 1, rotate: 0 }}
-          whileHover={{
-            scale: 1.5,
-            rotate: 15,
-          }}
-          transition={{
-            type: 'spring',
-            stiffness: 300,
-            damping: 20,
-          }}
-        >
-          Nothing to see here 🙄
-        </motion.h1>
-      </main>
+      {/* Navigation */}
+      <div className="mt-20">
+        <SideBar page="404" />
+      </div>
 
-      {/* Footer */}
-      <Footer page="404" />
+      {/* 404 */}
+      <motion.h1
+        className={`${raleway600.className} mt-20 hidden w-full justify-center text-4xl font-semibold sm:flex`}
+        initial={{ scale: 1, rotate: 0 }}
+        animate={{ scale: 1, rotate: 0 }}
+        whileHover={{
+          scale: 1.5,
+          rotate: 15,
+        }}
+        transition={{
+          type: 'spring',
+          stiffness: 300,
+          damping: 20,
+        }}
+      >
+        404
+      </motion.h1>
+
+      {/* Bottom Right Corner */}
+      <motion.div
+        animate={{ opacity: [0, 1], y: [20, 0] }}
+        transition={{ duration: 1, delay: 0.5, easing: 'ease-in-out' }}
+        className="absolute bottom-0 right-0 text-left sm:text-right"
+      >
+        <p className={`${raleway600.className} text-md p-12`}>
+          I can build full-stack web applications using Next.js and FastAPI,
+          integrating databases, state management, authentication, and seamless
+          API communication.
+        </p>
+      </motion.div>
     </>
   );
 }

@@ -3,13 +3,39 @@
 import React, { useState, useEffect } from 'react';
 import { useForm, SubmitHandler } from 'react-hook-form';
 
-import Footer from '@/components/footer';
+import SideBar from '@/components/SideBar';
+import { hennyPenny, raleway800 } from '@/styles/fonts';
 
 type FormValues = {
   name: string;
   email: string;
   message: string;
 };
+
+export default function ContactPage() {
+  return (
+    <div className="flex max-h-[calc(100vh-120px)] flex-col gap-12 sm:h-full lg:flex-row lg:justify-between">
+      {/* Navigation */}
+      <div className="flex w-full flex-col items-center lg:items-start">
+        <h1
+          className={`${hennyPenny.className} text-3xl font-bold sm:text-5xl`}
+        >
+          Leave a Message
+        </h1>
+
+        {/* Navigation */}
+        <div className="mb-0 mt-10 sm:mb-10 sm:mt-20">
+          <SideBar page="Contact" />
+        </div>
+      </div>
+
+      {/* Form */}
+      <div className="flex flex-col items-center overflow-y-auto p-2 sm:p-8 md:lg:w-[560px] lg:absolute lg:bottom-0 lg:right-0 xl:w-[800px]">
+        <ContactForm />
+      </div>
+    </div>
+  );
+}
 
 const ContactForm = () => {
   const {
@@ -66,11 +92,10 @@ const ContactForm = () => {
   };
 
   return (
-    // <div className="flex flex-col items-center justify-center bg-gray-50 px-4 dark:bg-gray-900 sm:px-6 md:px-8">
-    <div className="w-full max-w-sm rounded-lg bg-white p-8 shadow-lg dark:bg-gray-800 dark:text-gray-200 md:max-w-lg">
+    <div className="w-full rounded-lg bg-white p-4 dark:bg-gray-800 dark:text-gray-200 sm:p-8">
       {isSubmitted ? (
-        <div className="text-center text-green-600 dark:text-green-400">
-          <h2 className="text-2xl font-semibold">Thank you!</h2>
+        <div className="text-center">
+          <h2 className={`${raleway800.className} text-2xl`}>Thank you!</h2>
           <p>I&apos;ll get back to you shortly.</p>
         </div>
       ) : (
@@ -150,21 +175,3 @@ const ContactForm = () => {
     </div>
   );
 };
-
-export default function Contact() {
-  return (
-    <>
-      {/* Main */}
-      <main className="flex flex-1 flex-col items-center justify-center gap-10 px-6 py-10 sm:px-8 sm:pb-20 md:px-16 lg:px-20">
-        <h1 className="my-4 text-center text-4xl font-bold text-gray-900 dark:text-gray-100 md:my-12">
-          Leave a Message
-        </h1>
-
-        <ContactForm />
-      </main>
-
-      {/* Footer */}
-      <Footer page="Contact" />
-    </>
-  );
-}

@@ -1,14 +1,14 @@
 'use client';
 
-import React, { ReactNode } from 'react';
+import React from 'react';
 
 interface BulletProps {
   color?: 'red' | 'blue' | 'green' | 'yellow';
-  children: ReactNode;
+  description: string;
 }
 
-const Bullet = ({ color = 'blue', children }: BulletProps) => {
-  const colorClass = {
+const Bullet = ({ color = 'blue', description }: BulletProps) => {
+  const colorClassName = {
     red: 'bg-red-500',
     blue: 'bg-blue-500',
     green: 'bg-green-500',
@@ -16,9 +16,14 @@ const Bullet = ({ color = 'blue', children }: BulletProps) => {
   }[color];
 
   return (
-    <div className="flex items-center gap-2">
-      <div className={`mb-1 h-2 w-2 rounded-full ${colorClass}`} />
-      <span className="text-gray-800 dark:text-gray-300">{children}</span>
+    <div className="flex w-full items-center gap-2">
+      {/* Fixed-size dot aligned to the first line center */}
+      <div className={`min-h-2 min-w-2 rounded-full ${colorClassName}`} />
+
+      {/* Description text stays aligned */}
+      <div className="leading-normal text-gray-800 dark:text-gray-300">
+        {description}
+      </div>
     </div>
   );
 };

@@ -21,13 +21,13 @@ const ThemeSwitcher = () => {
   return (
     <button
       onClick={toggleTheme}
-      className="fixed right-4 top-4 flex h-10 w-10 items-center justify-center rounded-full bg-blue-600 text-white shadow-md transition-transform hover:scale-110 dark:bg-gray-800 dark:text-gray-200"
+      className="fixed right-2 top-2 flex h-8 w-8 items-center justify-center rounded-full bg-gray-800 text-white transition-transform hover:scale-110 hover:bg-blue-500 dark:bg-gray-200 dark:text-gray-800 dark:hover:bg-blue-500"
       aria-label="Toggle Theme"
     >
       {resolvedTheme === 'dark' ? (
         <SunIcon className="h-5 w-5" />
       ) : (
-        <MoonIcon className="h-5 w-5" />
+        <MoonIcon className="h-4 w-4" />
       )}
     </button>
   );
