@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
 
 import SideBar from "@/components/SideBar";
-import { hennyPenny, raleway800 } from "@/styles/fonts";
+import { audiowide, raleway800 } from "@/styles/fonts";
 
 type FormValues = {
   name: string;
@@ -17,9 +17,7 @@ export default function ContactPage() {
     <div className="flex max-h-[calc(100vh-120px)] flex-col gap-12 sm:h-full lg:flex-row lg:justify-between">
       {/* Navigation */}
       <div className="flex w-full flex-col items-center lg:items-start">
-        <h1 className={`${hennyPenny.className} text-3xl font-bold sm:text-5xl`}>
-          Leave a Message
-        </h1>
+        <h1 className={`${audiowide.className} text-3xl font-bold sm:text-5xl`}>Leave a Message</h1>
 
         {/* Navigation */}
         <div className="mb-0 mt-10 sm:mb-10 sm:mt-20">

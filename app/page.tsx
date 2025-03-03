@@ -4,7 +4,7 @@ import { motion } from "motion/react";
 import React from "react";
 
 import SideBar from "@/components/SideBar";
-import { hennyPenny, raleway600 } from "@/styles/fonts";
+import { audiowide, raleway600 } from "@/styles/fonts";
 
 export default function HomePage() {
   return (
@@ -15,7 +15,7 @@ export default function HomePage() {
         transition={{ duration: 1, easing: "ease-in-out" }}
         className="text-left"
       >
-        <h1 className={`${hennyPenny.className} text-5xl`}>
+        <h1 className={`${audiowide.className} text-5xl`}>
           Jialin Yang <br />
         </h1>
         <p className={`${raleway600.className} text-md mt-4`}>Software Engineer</p>
@@ -33,8 +33,8 @@ export default function HomePage() {
         className="absolute bottom-0 right-0 text-left sm:text-right"
       >
         <p className={`${raleway600.className} text-md p-12`}>
-          I can build full-stack web applications using Next.js and FastAPI, integrating databases,
-          state management, authentication, and seamless API communication.
+          I build web applications using Next.js and FastAPI, integrating databases, state
+          management, authentication, and seamless API communication.
         </p>
       </motion.div>
     </>

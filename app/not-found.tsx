@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import React from "react";
 
 import SideBar from "@/components/SideBar";
-import { hennyPenny, raleway600 } from "@/styles/fonts";
+import { audiowide, raleway600 } from "@/styles/fonts";
 
 export default function NotFound() {
   return (
@@ -15,7 +15,7 @@ export default function NotFound() {
         transition={{ duration: 1, easing: "ease-in-out" }}
         className="text-left"
       >
-        <h1 className={`${hennyPenny.className} text-5xl`}>
+        <h1 className={`${audiowide.className} text-5xl`}>
           Jialin Yang <br />
         </h1>
         <p className={`${raleway600.className} text-md mt-4`}>Software Engineer</p>
