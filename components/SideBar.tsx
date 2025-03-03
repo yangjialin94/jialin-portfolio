@@ -67,7 +67,7 @@ const SideBar = ({ page }: SideBarProps) => {
           transition: { duration: 0.2, ease: "easeOut" },
         }}
         className={tabClassName}
-        href="/files/Resume_022525.pdf"
+        href="/files/Resume_030325.pdf"
         download="Jialin_Resume.pdf"
         target="_blank"
         rel="noopener noreferrer"
