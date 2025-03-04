@@ -47,7 +47,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               {children}
 
               {/* Background */}
-              <div className="pointer-events-none absolute inset-0 overflow-hidden rounded-lg">
+              <div className="pointer-events-none absolute inset-0 overflow-hidden rounded">
                 <VantaBackground />
               </div>
             </div>
