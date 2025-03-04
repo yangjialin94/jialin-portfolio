@@ -37,7 +37,7 @@
     ],
     "skills": {
       "Languages": ["TypeScript"],
-      "Frontend": ["Next.js", "Zustand", "Tailwind CSS"],
+      "Frontend": ["Next.js", "Context API", "Tailwind CSS"],
       "DevOps": ["Vercel Analytics", "Vercel"]
     }
   }
