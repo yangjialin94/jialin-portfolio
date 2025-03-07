@@ -3,6 +3,7 @@
     "id": 1,
     "title": "Gender Reveal Puzzle Game",
     "dates": "Feb 2025 - Present",
+    "website": "https://github.com/yangjialin94/gender-reveal-puzzle-readme/tree/main",
     "tasks": [
       {
         "id": 1,
@@ -22,6 +23,32 @@
   },
   {
     "id": 2,
+    "title": "E-Commerce Dashboard",
+    "dates": "March 2025",
+    "website": "https://github.com/yangjialin94/nodejs-mui-demo",
+    "tasks": [
+      {
+        "id": 1,
+        "description": "Developed a backend using Node.js with Express and SQLite for managing products and cart functionality."
+      },
+      {
+        "id": 2,
+        "description": "Implemented a responsive frontend with Next.js and Material UI, incorporating Zustand for state management and Tailwind CSS for layout adjustments."
+      },
+      {
+        "id": 3,
+        "description": "Learned Node.js and Material UI, and completed the project in 3 days."
+      }
+    ],
+    "skills": {
+      "Languages": ["TypeScript"],
+      "Frontend": ["Next.js", "Material UI", "Zustand", "Tailwind CSS"],
+      "Backend": ["Node.js", "Express", "SQLite"],
+      "DevOps": ["Docker"]
+    }
+  },
+  {
+    "id": 3,
     "title": "Minimal Pricing App",
     "dates": "Feb 2025",
     "website": "https://www.minimalpricing.com/",
