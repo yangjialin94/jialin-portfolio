@@ -1,6 +1,33 @@
 [
   {
     "id": 1,
+    "title": "Libaray",
+    "dates": "March 2025 - Present",
+    "website": "https://github.com/yangjialin94/library",
+    "tasks": [
+      {
+        "id": 1,
+        "description": "Created a structured repository to store multiple small-scale side projects, serving as a personal code library."
+      },
+      {
+        "id": 2,
+        "description": "Built and organized various projects covering frontend, backend, and full-stack development with modern technologies."
+      },
+      {
+        "id": 3,
+        "description": "Enhanced proficiency in different stacks by working on diverse real-world implementations, including state management, API integrations, and UI/UX improvements."
+      }
+    ],
+    "skills": {
+      "Languages": ["TypeScript", "Python"],
+      "Frontend": ["Next.js", "Material UI", "Zustand", "Tailwind CSS"],
+      "Backend": ["Node.js", "Express", "FastAPI", "SQLite"],
+      "Real-Time Communication": ["Socket.IO"],
+      "DevOps": ["Docker"]
+    }
+  },
+  {
+    "id": 2,
     "title": "Gender Reveal Puzzle Game",
     "dates": "Feb 2025 - Present",
     "website": "https://github.com/yangjialin94/gender-reveal-puzzle-readme/tree/main",
@@ -19,32 +46,6 @@
       "Frontend": ["Next.js", "React", "Tailwind CSS", "Zustand"],
       "Backend": ["FastAPI", "PostgreSQL", "SQLAlchemy", "WebSockets", "Redis"],
       "DevOps": ["Docker", "Firebase"]
-    }
-  },
-  {
-    "id": 2,
-    "title": "E-Commerce Dashboard",
-    "dates": "March 2025",
-    "website": "https://github.com/yangjialin94/nodejs-mui-demo",
-    "tasks": [
-      {
-        "id": 1,
-        "description": "Developed a backend using Node.js with Express and SQLite for managing products and cart functionality."
-      },
-      {
-        "id": 2,
-        "description": "Implemented a responsive frontend with Next.js and Material UI, incorporating Zustand for state management and Tailwind CSS for layout adjustments."
-      },
-      {
-        "id": 3,
-        "description": "Learned Node.js and Material UI, and completed the project in 3 days."
-      }
-    ],
-    "skills": {
-      "Languages": ["TypeScript"],
-      "Frontend": ["Next.js", "Material UI", "Zustand", "Tailwind CSS"],
-      "Backend": ["Node.js", "Express", "SQLite"],
-      "DevOps": ["Docker"]
     }
   },
   {
