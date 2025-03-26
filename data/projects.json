@@ -28,28 +28,6 @@
   },
   {
     "id": 2,
-    "title": "Gender Reveal Puzzle Game",
-    "dates": "Feb 2025 - Present",
-    "website": "https://github.com/yangjialin94/gender-reveal-puzzle-readme/tree/main",
-    "tasks": [
-      {
-        "id": 1,
-        "description": "Developing a real-time, interactive web app where guests collaborate to assemble a hidden gender reveal image."
-      },
-      {
-        "id": 2,
-        "description": "Implemented QR code-based room joining and state persistence, allowing users to rejoin a session if disconnected."
-      }
-    ],
-    "skills": {
-      "Languages": ["TypeScript", "Python"],
-      "Frontend": ["Next.js", "React", "Tailwind CSS", "Zustand"],
-      "Backend": ["FastAPI", "PostgreSQL", "SQLAlchemy", "WebSockets", "Redis"],
-      "DevOps": ["Docker", "Firebase"]
-    }
-  },
-  {
-    "id": 3,
     "title": "Minimal Pricing App",
     "dates": "Feb 2025",
     "website": "https://www.minimalpricing.com/",
