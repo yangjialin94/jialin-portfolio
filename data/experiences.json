@@ -8,30 +8,26 @@
     "tasks": [
       {
         "id": 1,
-        "description": "Collaborated with a team to develop Nuve’s web platform using Next.js, React, Tailwind CSS, and TypeScript, ensuring high performance and smooth deployments via Vercel."
+        "description": "Built and maintained the frontend of Nuve's SaaS product using Next.js, TypeScript, and Tailwind CSS, helping 7 enterprise clients easily manage and deploy complex cloud-based systems."
       },
       {
         "id": 2,
-        "description": "Optimized frontend state management with Zustand, reducing unnecessary re-renders and enhancing user interactions."
+        "description": "Improved frontend performance by integrating Zustand for state management, reducing unnecessary re-renders and improving overall responsiveness by 35%."
       },
       {
         "id": 3,
-        "description": "Contributed to building an asynchronous FastAPI backend with Tortoise ORM and PostgreSQL, supporting scalable and efficient data operations."
+        "description": "Expanded backend support using Python with FastAPI and PostgreSQL by updating data models, running schema migrations, and modifying API endpoints to support frontend features."
       },
       {
         "id": 4,
-        "description": "Implemented integrations with AWS, Azure, and GCP APIs, helping automate cloud infrastructure and streamline server provisioning."
-      },
-      {
-        "id": 5,
-        "description": "Enhanced analytics tracking by integrating Google Analytics & PostHog, supporting data-driven improvements for the platform."
+        "description": "Implemented nuveplatform.com from Figma designs, turning mockups into a responsive marketing site and deploying it on Vercel."
       }
     ],
     "skills": {
       "Languages": ["TypeScript", "Python"],
       "Frontend": ["Next.js", "React", "Tailwind CSS", "Zustand"],
       "Backend": ["FastAPI", "PostgreSQL", "Tortoise ORM"],
-      "DevOps": ["Docker", "GCP", "Google Analytics", "PostHog", "Vercel"]
+      "DevOps": ["Docker", "Git", "GitHub", "GCP", "Google Analytics", "Vercel"]
     }
   },
   {
@@ -42,22 +38,22 @@
     "tasks": [
       {
         "id": 1,
-        "description": "Developed and deployed SAP Cloud Platform applications using JavaScript, SAPUI5, and OData, collaborating with backend teams on enterprise solutions."
+        "description": "Developed and deployed 10+ enterprise applications on SAP Cloud Platform using JavaScript, SAPUI5, and OData, collaborating closely with backend teams to deliver robust SAP-integrated solutions."
       },
       {
         "id": 2,
-        "description": "Independently designed and built an internal time-tracking system with PTO tracking, approval workflows, and expense reimbursement, improving payroll accuracy and reducing manual admin tasks."
+        "description": "Built the company's internal UI component library with JavaScript and SAPUI5 to standardize UI development, speed up delivery, and ensure consistency across projects."
       },
       {
         "id": 3,
-        "description": "Optimized OData data transfers in SAP ECC, improving API response times and reducing system bottlenecks."
+        "description": "Designed and built a suite of Fiori applications for internal time-tracking system with PTO tracking, approval workflows, and expense reimbursement, improving payroll accuracy and reducing manual administrative work."
       }
     ],
     "skills": {
-      "Languages": ["JavaScript", "ABAP"],
-      "Frontend": ["SAPUI5"],
-      "Backend": ["OData", "SAP Cloud Platform", "SAP Gateway", "HANA"],
-      "DevOps": ["SAP GUI"]
+      "Languages": ["JavaScript"],
+      "Frontend": ["SAPUI5", "SAP Cloud Platform"],
+      "Backend": ["OData", "HANA"],
+      "DevOps": ["Git", "GitHub", "SAP GUI"]
     }
   },
   {
@@ -68,13 +64,13 @@
     "tasks": [
       {
         "id": 1,
-        "description": "Built a T-Code lookup Fiori app using SAPUI5, JavaScript, OData, ABAP, and SAP Cloud Platform."
+        "description": "Built a transaction code lookup tool as a Fiori application on SAP Cloud Platform using JavaScript, SAPUI5, and OData."
       }
     ],
     "skills": {
-      "Languages": ["JavaScript", "ABAP"],
-      "Frontend": ["SAPUI5"],
-      "Backend": ["OData", "SAP Cloud Platform", "SAP Gateway"],
+      "Languages": ["JavaScript"],
+      "Frontend": ["SAPUI5", "SAP Cloud Platform"],
+      "Backend": ["OData", "HANA"],
       "DevOps": ["SAP GUI"]
     }
   }

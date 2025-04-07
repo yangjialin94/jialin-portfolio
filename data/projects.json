@@ -2,20 +2,37 @@
   {
     "id": 1,
     "title": "Library",
-    "dates": "March 2025 - Present",
+    "dates": "Mar 2025 - Current",
+    "website": "",
+    "tasks": [
+      {
+        "id": 1,
+        "description": "A responsive web application for tracking daily tasks and journaling, designed with a simple UI to support efficient planning and minimal learning curve."
+      }
+    ],
+    "skills": {
+      "Languages": ["TypeScript", "Python"],
+      "Frontend": [
+        "Next.js",
+        "Context API",
+        "Tailwind CSS",
+        "React Query",
+        "Zustand",
+        "localStorage"
+      ],
+      "Backend": ["FastAPI", "SQLAlchemy", "PostGreSQL", "pytest"],
+      "Authentication": ["Firebase Auth"]
+    }
+  },
+  {
+    "id": 2,
+    "title": "Library",
+    "dates": "Mar 2025 - Current",
     "website": "https://github.com/yangjialin94/library",
     "tasks": [
       {
         "id": 1,
-        "description": "Created a structured repository to store multiple small-scale side projects, serving as a personal code library."
-      },
-      {
-        "id": 2,
-        "description": "Built and organized various projects covering frontend, backend, and full-stack development with modern technologies."
-      },
-      {
-        "id": 3,
-        "description": "Enhanced proficiency in different stacks by working on diverse real-world implementations, including state management, API integrations, and UI/UX improvements."
+        "description": "A structured repository to store multiple small-scale side projects, serving as a personal code library."
       }
     ],
     "skills": {
@@ -27,23 +44,19 @@
     }
   },
   {
-    "id": 2,
-    "title": "Minimal Pricing App",
+    "id": 3,
+    "title": "Minimal Pricing",
     "dates": "Feb 2025",
     "website": "https://www.minimalpricing.com/",
     "tasks": [
       {
         "id": 1,
-        "description": "Developed a frontend-only contract pricing platform with dynamic cost calculations and PDF generation."
-      },
-      {
-        "id": 2,
-        "description": "Utilized Session Storage for temporary data storage, ensuring a smooth user experience."
+        "description": "A responsive web application for generating custom contract quotes based on dynamic user input."
       }
     ],
     "skills": {
       "Languages": ["TypeScript"],
-      "Frontend": ["Next.js", "Context API", "Tailwind CSS"],
+      "Frontend": ["Next.js", "Context API", "Tailwind CSS", "sessionStorage"],
       "DevOps": ["Vercel Analytics", "Vercel"]
     }
   }
