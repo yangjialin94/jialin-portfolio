@@ -21,7 +21,8 @@
         "localStorage"
       ],
       "Backend": ["FastAPI", "SQLAlchemy", "PostGreSQL", "pytest"],
-      "Authentication": ["Firebase Auth"]
+      "Authentication": ["Firebase Auth"],
+      "DevOps": ["Vercel", "Render"]
     }
   },
   {
