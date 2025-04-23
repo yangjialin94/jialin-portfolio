@@ -7,20 +7,19 @@
     "tasks": [
       {
         "id": 1,
-        "description": "A responsive web application for tracking daily tasks and journaling, designed with a simple UI to support efficient planning and minimal learning curve."
+        "description": "A responsive web application for daily task tracking and journaling, designed with a clean UI to deliver efficient planning and a paper-like experience."
       }
     ],
     "skills": {
       "Languages": ["TypeScript", "Python"],
       "Frontend": [
         "Next.js",
-        "Context API",
         "Tailwind CSS",
         "React Query",
         "Zustand",
-        "localStorage"
+        "Context API"
       ],
-      "Backend": ["FastAPI", "SQLAlchemy", "PostGreSQL", "pytest"],
+      "Backend": ["FastAPI", "SQLAlchemy", "PostgreSQL", "pytest"],
       "Authentication": ["Firebase Auth"],
       "DevOps": ["Vercel", "Render"]
     }
