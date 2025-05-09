@@ -1,9 +1,10 @@
 [
   {
     "id": 1,
-    "title": "Library",
+    "title": "Minibunn Planner",
+    "company": "Minibunn",
     "dates": "Mar 2025 - Current",
-    "website": "",
+    "website": "https://www.minibunnplanner.com/",
     "tasks": [
       {
         "id": 1,
