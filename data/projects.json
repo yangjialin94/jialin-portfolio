@@ -8,7 +8,15 @@
     "tasks": [
       {
         "id": 1,
-        "description": "A responsive web application for daily task tracking and journaling, designed with a clean UI to deliver efficient planning and a paper-like experience."
+        "description": "Independently designed, built, and launched a full-stack SaaS productivity web app for task tracking and journaling, live at minibunnplanner.com."
+      },
+      {
+        "id": 2,
+        "description": "Built with Next.js, FastAPI, PostgreSQL, Firebase Auth, and Stripe; implemented 14-day trials, subscription billing, and deployed on Vercel and Render."
+      },
+      {
+        "id": 3,
+        "description": "Implemented progress tracking, journaling, calendar views, and secure user authentication with backend validation and automated tests using Pytest."
       }
     ],
     "skills": {
@@ -52,7 +60,11 @@
     "tasks": [
       {
         "id": 1,
-        "description": "A responsive web application for generating custom contract quotes based on dynamic user input."
+        "description": "Built a solo web app to generate dynamic contract quotes based on user input."
+      },
+      {
+        "id": 2,
+        "description": "Developed with Next.js, TypeScript, Tailwind CSS, and Context API, deployed on Vercel using sessionStorage for lightweight state management."
       }
     ],
     "skills": {

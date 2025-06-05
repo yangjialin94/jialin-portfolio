@@ -1,22 +1,22 @@
 [
   {
     "id": 1,
-    "title": "Software Engineer",
+    "title": "Founding Frontend Software Engineer",
     "company": "Nuve",
     "dates": "Jul 2021 - Dec 2024",
     "website": "https://www.nuveplatform.com",
     "tasks": [
       {
         "id": 1,
-        "description": "Built and maintained the frontend of Nuve's SaaS product using Next.js, TypeScript, and Tailwind CSS, helping 7 enterprise clients easily manage and deploy complex cloud-based systems."
+        "description": "Built and maintained the frontend of the company's SaaS product using Next.js, TypeScript, and Tailwind CSS, helping 7 enterprise clients easily manage and deploy complex cloud-based systems."
       },
       {
         "id": 2,
-        "description": "Improved frontend performance by integrating Zustand for state management, reducing unnecessary re-renders and improving overall responsiveness by 35%."
+        "description": "Improved frontend performance by integrating Zustand for state management, reducing unnecessary re-renders and improving responsiveness by 35%."
       },
       {
         "id": 3,
-        "description": "Expanded backend support using Python with FastAPI and PostgreSQL by updating data models, running schema migrations, and modifying API endpoints to support frontend features."
+        "description": "Expanded backend support with Python (FastAPI) and PostgreSQL by updating data models, running schema migrations, and modifying API endpoints to support frontend features."
       },
       {
         "id": 4,
@@ -38,15 +38,15 @@
     "tasks": [
       {
         "id": 1,
-        "description": "Developed and deployed 10+ enterprise applications on SAP Cloud Platform using JavaScript, SAPUI5, and OData, collaborating closely with backend teams to deliver robust SAP-integrated solutions."
+        "description": "Developed and deployed 10+ enterprise applications on SAP Cloud Platform using JavaScript, SAPUI5, and OData."
       },
       {
         "id": 2,
-        "description": "Built the company's internal UI component library with JavaScript and SAPUI5 to standardize UI development, speed up delivery, and ensure consistency across projects."
+        "description": "Collaborated with backend teams to deliver robust SAP-integrated solutions and streamline UI development with SAPUI5."
       },
       {
         "id": 3,
-        "description": "Designed and built a suite of Fiori applications for internal time-tracking system with PTO tracking, approval workflows, and expense reimbursement, improving payroll accuracy and reducing manual administrative work."
+        "description": "Designed and built a suite of Fiori applications for internal time-tracking, PTO, and approval workflows, reducing manual admin work and improving accuracy."
       }
     ],
     "skills": {
@@ -64,7 +64,7 @@
     "tasks": [
       {
         "id": 1,
-        "description": "Built a transaction code lookup tool as a Fiori application on SAP Cloud Platform using JavaScript, SAPUI5, and OData."
+        "description": "Built a transaction code lookup tool as a Fiori application on SAP Cloud Platform."
       }
     ],
     "skills": {
