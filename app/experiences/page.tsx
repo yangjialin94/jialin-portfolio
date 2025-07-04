@@ -38,7 +38,7 @@ export default function ExperiencesPage() {
       >
         {Experiences.map((experience: ExperienceOrProject) => (
           <motion.div key={experience.id} variants={itemVariants}>
-            <Card data={experience} />
+            <Card data={experience} type="experience" />
           </motion.div>
         ))}
       </motion.div>

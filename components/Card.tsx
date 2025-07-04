@@ -8,11 +8,14 @@ import Skills from "@/components/Skills";
 import { raleway600, raleway800 } from "@/styles/fonts";
 import { ExperienceOrProject } from "@/types/types";
 
+import Bullet from "./Bullet";
+
 interface CardProps {
   data: ExperienceOrProject;
+  type: "experience" | "project";
 }
 
-const Card = ({ data }: CardProps) => {
+const Card = ({ data, type }: CardProps) => {
   return (
     <div
       className={`${raleway600.className} max-w-4xl rounded-lg border-2 border-gray-500 p-6 hover:shadow-xl dark:hover:shadow-white sm:p-8`}
@@ -67,7 +70,11 @@ const Card = ({ data }: CardProps) => {
       <ul className="mt-4 space-y-4">
         {data.tasks.map((task) => (
           <li key={task.id}>
-            <span>{task.description}</span>
+            {type === "experience" ? (
+              <Bullet description={task.description} />
+            ) : (
+              <span>{task.description}</span>
+            )}
           </li>
         ))}
       </ul>
