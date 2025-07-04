@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 
-import Bullet from "@/components/Bullet";
 import Skills from "@/components/Skills";
 import { raleway600, raleway800 } from "@/styles/fonts";
 import { ExperienceOrProject } from "@/types/types";
@@ -68,7 +67,7 @@ const Card = ({ data }: CardProps) => {
       <ul className="mt-4 space-y-4">
         {data.tasks.map((task) => (
           <li key={task.id}>
-            <Bullet description={task.description} />
+            <span>{task.description}</span>
           </li>
         ))}
       </ul>

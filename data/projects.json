@@ -8,29 +8,22 @@
     "tasks": [
       {
         "id": 1,
-        "description": "Independently designed, built, and launched a full-stack SaaS productivity web app for task tracking and journaling, live at minibunnplanner.com."
-      },
-      {
-        "id": 2,
-        "description": "Built with Next.js, FastAPI, PostgreSQL, Firebase Auth, and Stripe; implemented 14-day trials, subscription billing, and deployed on Vercel and Render."
-      },
-      {
-        "id": 3,
-        "description": "Implemented progress tracking, journaling, calendar views, and secure user authentication with backend validation and automated tests using Pytest."
+        "description": "Independently designed, built, and launched a full-stack SaaS productivity web application (Typescript, Next.js, Python, FastAPI, PostgreSQL, Firebase Auth, Stripe) for task tracking and journaling. Successfully implemented 14-day trials and subscription billing, deploying on Vercel and Render."
       }
     ],
     "skills": {
-      "Languages": ["TypeScript", "Python"],
+      "Languages": ["TypeScript", "Python", "SQL", "HTML", "CSS"],
       "Frontend": [
+        "React",
         "Next.js",
         "Tailwind CSS",
         "React Query",
         "Zustand",
         "Context API"
       ],
-      "Backend": ["FastAPI", "SQLAlchemy", "PostgreSQL", "pytest"],
-      "Authentication": ["Firebase Auth"],
-      "DevOps": ["Vercel", "Render"]
+      "Backend": ["FastAPI", "RESTful APIs", "PostgreSQL", "SQLAlchemy"],
+      "Cloud Platforms": ["Vercel", "Render"],
+      "DevOps & Tools": ["Git", "GitHub", "pytest", "Firebase Auth", "Stripe"]
     }
   },
   {
@@ -41,15 +34,20 @@
     "tasks": [
       {
         "id": 1,
-        "description": "A structured repository to store multiple small-scale side projects, serving as a personal code library."
+        "description": "Developed a frontend-only contract pricing platform featuring dynamic cost calculations and PDF generation. Leveraged Session Storage for efficient temporary data management, ensuring a smooth user experience."
       }
     ],
     "skills": {
       "Languages": ["TypeScript", "Python"],
-      "Frontend": ["Next.js", "Material UI", "Zustand", "Tailwind CSS"],
+      "Frontend": [
+        "React",
+        "Next.js",
+        "Tailwind CSS",
+        "Material UI",
+        "Zustand"
+      ],
       "Backend": ["Node.js", "Express", "FastAPI", "SQLite"],
-      "Real-Time Communication": ["Socket.IO"],
-      "DevOps": ["Docker"]
+      "DevOps & Tools": ["Docker", "Socket.IO"]
     }
   },
   {
@@ -60,17 +58,20 @@
     "tasks": [
       {
         "id": 1,
-        "description": "Built a solo web app to generate dynamic contract quotes based on user input."
-      },
-      {
-        "id": 2,
-        "description": "Developed with Next.js, TypeScript, Tailwind CSS, and Context API, deployed on Vercel using sessionStorage for lightweight state management."
+        "description": "Built a solo web app to generate dynamic contract quotes based on user input, using Next.js, TypeScript, Tailwind CSS, and Context API, deployed on Vercel using sessionStorage for lightweight state management."
       }
     ],
     "skills": {
       "Languages": ["TypeScript"],
-      "Frontend": ["Next.js", "Context API", "Tailwind CSS", "sessionStorage"],
-      "DevOps": ["Vercel Analytics", "Vercel"]
+      "Frontend": [
+        "React",
+        "Next.js",
+        "Tailwind CSS",
+        "Context API",
+        "sessionStorage"
+      ],
+      "Cloud Platforms": ["Vercel"],
+      "DevOps & Tools": ["Vercel Analytics"]
     }
   }
 ]
