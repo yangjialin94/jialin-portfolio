@@ -33,8 +33,8 @@ export default function HomePage() {
         className="absolute bottom-0 right-0 text-left sm:text-right"
       >
         <p className={`${raleway600.className} text-md p-12`}>
-          I build web apps with Next.js and FastAPI, integrating data, auth, state, and APIs
-          seamlessly.
+          Results-driven Software Engineer with 6 years&apos; experience building scalable SaaS
+          products with React/TypeScript and Python.
         </p>
       </motion.div>
     </>
