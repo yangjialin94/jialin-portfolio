@@ -1,6 +1,56 @@
 [
   {
     "id": 1,
+    "title": "Application Developer Intern",
+    "company": "10xCoding",
+    "dates": "Jun 2018 - Dec 2018",
+    "tasks": [
+      {
+        "id": 1,
+        "description": "Developed a transaction code lookup tool as a Fiori application on SAP Cloud Platform, reducing transaction search time from 10 seconds to 3 seconds. "
+      }
+    ],
+    "skills": {
+      "Languages": ["JavaScript", "SQL", "HTML", "CSS"],
+      "Frontend": ["SAPUI5", "Fiori", "OData", "HANA"],
+      "Cloud Platforms": ["SAP Cloud Platform (SAP BTP)"],
+      "DevOps & Tools": ["Git", "GitHub", "SAP GUI"],
+      "Methodologies": ["Agile"]
+    }
+  },
+  {
+    "id": 2,
+    "title": "Application Developer",
+    "company": "10xCoding",
+    "dates": "Feb 2019 - Jun 2021",
+    "tasks": [
+      {
+        "id": 1,
+        "description": "Engineered and deployed 10+ enterprise-grade SAP Cloud Platform applications (JavaScript, SAPUI5, OData), including custom reporting tools and a B2B self-service portal"
+      },
+      {
+        "id": 2,
+        "description": "Implemented advanced CRUD operations for sales documents, integrating custom search, email functionalities, and credit card processing, enhancing business efficiency."
+      },
+      {
+        "id": 3,
+        "description": "Optimized OData data transfers from SAP ECC systems, collaborating with backend teams to significantly enhance API response times and reduce latency by 50%. "
+      },
+      {
+        "id": 4,
+        "description": "Architected and independently built a comprehensive internal time-tracking system (PTO, sick leave, approval workflows, expense reimbursement with image uploads) leveraging SAP HANA and SAPUI5. "
+      }
+    ],
+    "skills": {
+      "Languages": ["JavaScript", "SQL", "HTML", "CSS"],
+      "Frontend": ["SAPUI5", "Fiori", "OData", "HANA"],
+      "Cloud Platforms": ["SAP Cloud Platform (SAP BTP)"],
+      "DevOps & Tools": ["Git", "GitHub", "SAP GUI"],
+      "Methodologies": ["Agile"]
+    }
+  },
+  {
+    "id": 3,
     "title": "Founding Software Engineer",
     "company": "Nuve",
     "dates": "Jul 2021 - Dec 2024",
@@ -42,56 +92,6 @@
       "Cloud Platforms": ["GCP", "Vercel"],
       "DevOps & Tools": ["Docker", "Git", "GitHub", "Google Analytics"],
       "Methodologies": ["Agile", "Full-Stack"]
-    }
-  },
-  {
-    "id": 2,
-    "title": "Application Developer",
-    "company": "10xCoding",
-    "dates": "Feb 2019 - Jun 2021",
-    "tasks": [
-      {
-        "id": 1,
-        "description": "Engineered and deployed 10+ enterprise-grade SAP Cloud Platform applications (JavaScript, SAPUI5, OData), including custom reporting tools and a B2B self-service portal"
-      },
-      {
-        "id": 2,
-        "description": "Implemented advanced CRUD operations for sales documents, integrating custom search, email functionalities, and credit card processing, enhancing business efficiency."
-      },
-      {
-        "id": 3,
-        "description": "Optimized OData data transfers from SAP ECC systems, collaborating with backend teams to significantly enhance API response times and reduce latency by 50%. "
-      },
-      {
-        "id": 4,
-        "description": "Architected and independently built a comprehensive internal time-tracking system (PTO, sick leave, approval workflows, expense reimbursement with image uploads) leveraging SAP HANA and SAPUI5. "
-      }
-    ],
-    "skills": {
-      "Languages": ["JavaScript", "SQL", "HTML", "CSS"],
-      "Frontend": ["SAPUI5", "Fiori", "OData", "HANA"],
-      "Cloud Platforms": ["SAP Cloud Platform (SAP BTP)"],
-      "DevOps & Tools": ["Git", "GitHub", "SAP GUI"],
-      "Methodologies": ["Agile"]
-    }
-  },
-  {
-    "id": 3,
-    "title": "Application Developer Intern",
-    "company": "10xCoding",
-    "dates": "Jun 2018 - Dec 2018",
-    "tasks": [
-      {
-        "id": 1,
-        "description": "Developed a transaction code lookup tool as a Fiori application on SAP Cloud Platform, reducing transaction search time from 10 seconds to 3 seconds. "
-      }
-    ],
-    "skills": {
-      "Languages": ["JavaScript", "SQL", "HTML", "CSS"],
-      "Frontend": ["SAPUI5", "Fiori", "OData", "HANA"],
-      "Cloud Platforms": ["SAP Cloud Platform (SAP BTP)"],
-      "DevOps & Tools": ["Git", "GitHub", "SAP GUI"],
-      "Methodologies": ["Agile"]
     }
   }
 ]

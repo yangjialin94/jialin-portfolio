@@ -9,6 +9,8 @@ import { audiowide } from "@/styles/fonts";
 import { ExperienceOrProject } from "@/types/types";
 
 export default function ExperiencesPage() {
+  const experiences = [...Experiences].sort((a, b) => b.id - a.id);
+
   const containerVariants = {
     hidden: { opacity: 1 },
     show: { opacity: 1, transition: { staggerChildren: 0.3 } },
@@ -36,7 +38,7 @@ export default function ExperiencesPage() {
         animate="show"
         className="w-full space-y-6 overflow-y-auto rounded-lg px-0 sm:space-y-10 sm:px-4"
       >
-        {Experiences.map((experience: ExperienceOrProject) => (
+        {experiences.map((experience: ExperienceOrProject) => (
           <motion.div key={experience.id} variants={itemVariants}>
             <Card data={experience} type="experience" />
           </motion.div>

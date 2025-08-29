@@ -1,14 +1,37 @@
 [
   {
     "id": 1,
+    "title": "Minimal Pricing",
+    "dates": "Feb 2025",
+    "website": "https://www.minimalpricing.com/",
+    "tasks": [
+      {
+        "id": 1,
+        "description": "A minimal, responsive web app that generates dynamic contract quotes from user-provided requirements and options, offering transparent pricing summaries suitable for freelancers and small teams."
+      }
+    ],
+    "skills": {
+      "Languages": ["TypeScript"],
+      "Frontend": [
+        "React",
+        "Next.js",
+        "Tailwind CSS",
+        "Context API",
+        "sessionStorage"
+      ],
+      "Cloud Platforms": ["Vercel"],
+      "DevOps & Tools": ["Vercel Analytics"]
+    }
+  },
+  {
+    "id": 2,
     "title": "Minibunn Planner",
-    "company": "Minibunn",
-    "dates": "Mar 2025 - Current",
+    "dates": "Mar 2025 - Jul 2025",
     "website": "https://www.minibunnplanner.com/",
     "tasks": [
       {
         "id": 1,
-        "description": "Independently designed, built, and launched a full-stack SaaS productivity web application (Typescript, Next.js, Python, FastAPI, PostgreSQL, Firebase Auth, Stripe) for task tracking and journaling. Successfully implemented 14-day trials and subscription billing, deploying on Vercel and Render."
+        "description": "A focused productivity SaaS for task tracking and journaling that combines a clean kanban workflow with daily notes, reminders, and cross-device sync for personal planning."
       }
     ],
     "skills": {
@@ -27,51 +50,35 @@
     }
   },
   {
-    "id": 2,
-    "title": "Library",
-    "dates": "Mar 2025 - Current",
-    "website": "https://github.com/yangjialin94/library",
-    "tasks": [
-      {
-        "id": 1,
-        "description": "Developed a frontend-only contract pricing platform featuring dynamic cost calculations and PDF generation. Leveraged Session Storage for efficient temporary data management, ensuring a smooth user experience."
-      }
-    ],
-    "skills": {
-      "Languages": ["TypeScript", "Python"],
-      "Frontend": [
-        "React",
-        "Next.js",
-        "Tailwind CSS",
-        "Material UI",
-        "Zustand"
-      ],
-      "Backend": ["Node.js", "Express", "FastAPI", "SQLite"],
-      "DevOps & Tools": ["Docker", "Socket.IO"]
-    }
-  },
-  {
     "id": 3,
-    "title": "Minimal Pricing",
-    "dates": "Feb 2025",
-    "website": "https://www.minimalpricing.com/",
+    "title": "Knowli",
+    "dates": "Aug 2025 - Current",
+    "website": "https://apps.apple.com/us/app/knowli/id6749599315",
     "tasks": [
       {
         "id": 1,
-        "description": "Built a solo web app to generate dynamic contract quotes based on user input, using Next.js, TypeScript, Tailwind CSS, and Context API, deployed on Vercel using sessionStorage for lightweight state management."
+        "description": "A cross-platform microlearning app delivering 30-second, AI-generated stories and facts with a daily tap allowance, optional sign-in for history sync, and a distraction-free reading experience."
       }
     ],
     "skills": {
       "Languages": ["TypeScript"],
-      "Frontend": [
-        "React",
-        "Next.js",
-        "Tailwind CSS",
-        "Context API",
-        "sessionStorage"
+      "Frontend": ["React Native", "Expo"],
+      "Backend": [
+        "Node.js",
+        "Express",
+        "RESTful APIs",
+        "PostgreSQL",
+        "Prisma ORM"
       ],
-      "Cloud Platforms": ["Vercel"],
-      "DevOps & Tools": ["Vercel Analytics"]
+      "Cloud Platforms": ["Render", "Expo EAS", "App Store Connect"],
+      "DevOps & Tools": [
+        "Git",
+        "GitHub",
+        "Xcode",
+        "AdMob",
+        "react-native-iap",
+        "Apple Sign-In"
+      ]
     }
   }
 ]
