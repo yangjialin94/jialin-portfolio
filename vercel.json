@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "source": "/knowli",
+      "destination": "https://apps.apple.com/ca/app/knowli/id6749599315",
+      "permanent": true
+    }
+  ]
+}
