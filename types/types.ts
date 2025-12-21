@@ -16,7 +16,7 @@ export interface ExperienceOrProject {
   company?: string; // Optional for projects
   subtitle?: string; // Optional clarifying line under company name
   dates: string;
-  website?: string;
+  website?: string | null;
   tasks: Task[];
   skills: Skill;
 }
