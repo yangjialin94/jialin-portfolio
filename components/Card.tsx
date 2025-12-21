@@ -1,11 +1,8 @@
 "use client";
 
-import { motion } from "framer-motion";
-import Image from "next/image";
 import Link from "next/link";
 
 import Skills from "@/components/Skills";
-import { raleway600, raleway800 } from "@/styles/fonts";
 import { ExperienceOrProject } from "@/types/types";
 
 import Bullet from "./Bullet";
@@ -17,83 +14,60 @@ interface CardProps {
 
 const Card = ({ data, type }: CardProps) => {
   return (
-    <div
-      className={`${raleway600.className} max-w-4xl rounded-lg border-2 border-gray-500 p-6 hover:shadow-xl dark:hover:shadow-white sm:p-8`}
-    >
-      {/* Title */}
-      <div className="mb-4 flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
-        {data.website && !data.company ? (
-          <motion.div
-            whileHover={{
-              scale: 1.1,
-              rotate: [0, 5, -5, 5, 0],
-              transition: { duration: 0.4 },
-            }}
-          >
-            <Link href={data.website} target="_blank" rel="noopener noreferrer">
-              <h2
-                className={`${raleway800.className} text-xl hover:text-blue-500 dark:hover:text-blue-500 sm:text-2xl`}
-              >
-                {data.title}
-              </h2>
-            </Link>
-          </motion.div>
-        ) : (
-          <h2 className={`${raleway800.className} text-xl sm:text-2xl`}>{data.title}</h2>
-        )}
-
-        {/* Company */}
-        {data.company &&
-          (data.website ? (
-            <Link href={data.website} target="_blank" rel="noopener noreferrer">
-              <motion.div
-                whileHover={{ scale: 1.1, rotate: [0, 5, -5, 5, 0], transition: { duration: 0.4 } }}
-              >
-                <Image
-                  src={`/images/${data.company.toLowerCase()}-logo.svg`}
-                  alt={`${data.company} logo`}
-                  width={100}
-                  height={40}
-                  className="h-8 w-auto"
-                />
-              </motion.div>
+    <article className="space-y-4 border-b border-gray-200 pb-8 last:border-0 dark:border-gray-800">
+      {/* Header */}
+      <div className="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between">
+        <div>
+          {data.website && !data.company ? (
+            <Link
+              href={data.website}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-900 hover:text-gray-600 dark:text-gray-100 dark:hover:text-gray-400"
+            >
+              <h2 className="text-xl font-semibold">{data.title}</h2>
             </Link>
           ) : (
-            <span className="text-2xl font-bold text-red-600">{data.company}</span>
-          ))}
+            <h2 className="text-xl font-semibold text-gray-900 dark:text-gray-100">{data.title}</h2>
+          )}
+          {data.company && (
+            <p className="mt-1 text-base text-gray-600 dark:text-gray-400">{data.company}</p>
+          )}
+          {data.subtitle && (
+            <p className="mt-1 text-sm text-gray-500 dark:text-gray-500">{data.subtitle}</p>
+          )}
+        </div>
+        <p className="text-sm text-gray-500 dark:text-gray-500">{data.dates}</p>
       </div>
 
-      {/* Dates */}
-      <p>{data.dates}</p>
-
-      {/* Tasks */}
-      <ul className="mt-4 space-y-4">
-        {data.tasks.map((task) => (
-          <li key={task.id}>
-            {type === "experience" ? (
-              <Bullet description={task.description} />
-            ) : (
-              <span>{task.description}</span>
-            )}
-          </li>
-        ))}
-      </ul>
+      {/* Description */}
+      <div className="prose prose-sm dark:prose-invert max-w-none">
+        <ul className="space-y-2">
+          {data.tasks.map((task) => (
+            <li key={task.id} className="text-gray-700 dark:text-gray-300">
+              {type === "experience" ? <Bullet description={task.description} /> : task.description}
+            </li>
+          ))}
+        </ul>
+      </div>
 
       {/* Skills */}
-      <details className="mt-8">
-        <summary className={`${raleway800.className} cursor-pointer hover:text-blue-500`}>
+      <details className="mt-4">
+        <summary className="cursor-pointer text-sm font-medium text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-100">
           Tech Stack
         </summary>
-        <ul className="mt-8 space-y-3">
+        <div className="mt-4 space-y-3">
           {Object.entries(data.skills).map(([type, skills]) => (
-            <div key={type} className="flex flex-col gap-1">
-              <p className={`${raleway800.className}`}>{type}</p>
+            <div key={type}>
+              <p className="mb-2 text-xs font-medium uppercase tracking-wide text-gray-500 dark:text-gray-500">
+                {type}
+              </p>
               <Skills skills={skills} />
             </div>
           ))}
-        </ul>
+        </div>
       </details>
-    </div>
+    </article>
   );
 };
 

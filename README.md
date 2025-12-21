@@ -26,6 +26,7 @@ This is intentionally **not** a blog or content platform.
 - **Minibunn Planner** — A full-stack productivity SaaS (discontinued), archived with documentation and post-mortem
 
 Each project page focuses on:
+
 - Problem statement
 - System design and stack
 - Key engineering challenges

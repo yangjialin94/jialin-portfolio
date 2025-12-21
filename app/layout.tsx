@@ -4,17 +4,18 @@ import { Analytics } from "@vercel/analytics/react";
 import { ThemeProvider } from "next-themes";
 
 import ThemeSwitcher from "@/components/ThemeSwitcher";
-import VantaBackground from "@/components/VantaBackground";
 
 export const metadata = {
-  title: "Jialin Yang's Portfolio",
-  description: "Explore the projects, skills, and achievements of Jialin Yang.",
+  title: "Jialin Yang — Software Engineer",
+  description:
+    "Software Engineer with 6+ years of experience building and operating production systems, transitioning toward ML via UPenn MSE-AI.",
   icons: {
     icon: "/favicon.ico",
   },
   openGraph: {
-    title: "Jialin Yang's Portfolio",
-    description: "Explore the projects, skills, and achievements of Jialin Yang.",
+    title: "Jialin Yang — Software Engineer",
+    description:
+      "Software Engineer with 6+ years of experience building and operating production systems, transitioning toward ML via UPenn MSE-AI.",
     url: "https://jialinyang.com",
     siteName: "Jialin Yang's Portfolio",
     images: [
@@ -22,7 +23,7 @@ export const metadata = {
         url: "https://jialinyang.com/images/jialin-122324.jpg",
         width: 1200,
         height: 630,
-        alt: "Jialin Yang holding a cup of coffee with a cheerful expression.",
+        alt: "Jialin Yang — Software Engineer",
       },
     ],
     locale: "en_US",
@@ -30,8 +31,9 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Jialin Yang's Portfolio",
-    description: "Explore the projects, skills, and achievements of Jialin Yang.",
+    title: "Jialin Yang — Software Engineer",
+    description:
+      "Software Engineer with 6+ years of experience building and operating production systems, transitioning toward ML via UPenn MSE-AI.",
     images: ["https://jialinyang.com/images/jialin-122324.jpg"],
   },
 };
@@ -39,19 +41,9 @@ export const metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className="flex h-screen flex-col bg-gray-200 p-6 text-gray-800 antialiased dark:bg-gray-800 dark:text-gray-200 sm:p-12">
+      <body className="min-h-screen bg-white text-gray-900 antialiased dark:bg-gray-950 dark:text-gray-100">
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
-          <main className="flex flex-1 rounded-lg border-2 border-gray-500">
-            <div className="relative flex-1 p-6 sm:p-12">
-              {/* Content */}
-              {children}
-
-              {/* Background */}
-              <div className="pointer-events-none absolute inset-0 overflow-hidden rounded">
-                <VantaBackground />
-              </div>
-            </div>
-          </main>
+          <main className="mx-auto max-w-4xl px-6 py-12 sm:px-8 sm:py-16">{children}</main>
           <ThemeSwitcher />
         </ThemeProvider>
         <Analytics />

@@ -4,7 +4,7 @@ const Skills = ({ skills }: { skills: string[] }) => {
       {skills.map((skill) => (
         <span
           key={skill}
-          className="rounded-full border-2 border-gray-800 px-2 py-1 text-sm hover:border-blue-500 hover:text-blue-500 dark:border-gray-200 dark:hover:border-blue-500 dark:hover:text-blue-500"
+          className="rounded border border-gray-300 bg-white px-2.5 py-1 text-xs text-gray-700 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300"
         >
           {skill}
         </span>

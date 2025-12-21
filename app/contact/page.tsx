@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
 
 import SideBar from "@/components/SideBar";
-import { audiowide, raleway600, raleway800 } from "@/styles/fonts";
+import { raleway600, raleway800 } from "@/styles/fonts";
 
 type FormValues = {
   name: string;
@@ -14,21 +14,22 @@ type FormValues = {
 
 export default function ContactPage() {
   return (
-    <div className="flex max-h-[calc(100vh-120px)] flex-col gap-12 sm:h-full lg:flex-row lg:justify-between">
-      {/* Navigation */}
-      <div className="flex w-full flex-col items-center lg:items-start">
-        <h1 className={`${audiowide.className} text-3xl font-bold sm:text-5xl`}>Leave a Message</h1>
-
-        {/* Navigation */}
-        <div className="mb-0 mt-10 sm:mb-10 sm:mt-20">
-          <SideBar page="Contact" />
-        </div>
+    <div className="space-y-12">
+      <div>
+        <h1 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl">
+          Contact
+        </h1>
+        <p className="mt-2 text-base text-gray-600 dark:text-gray-400">Get in touch.</p>
       </div>
 
-      {/* Form */}
-      <div className="flex flex-col items-center overflow-y-auto p-2 sm:p-8 md:lg:w-[560px] lg:absolute lg:bottom-0 lg:right-0 xl:w-[800px]">
+      <div className="max-w-2xl space-y-4">
+        <p className="text-sm text-gray-600 dark:text-gray-400">
+          For roles, internships, or collaboration inquiries.
+        </p>
         <ContactForm />
       </div>
+
+      <SideBar page="Contact" />
     </div>
   );
 }
@@ -89,7 +90,7 @@ const ContactForm = () => {
 
   return (
     <div
-      className={`${raleway600.className} w-full rounded-lg border-2 border-gray-500 p-4 sm:p-8`}
+      className={`${raleway600.className} w-full rounded border border-gray-200 bg-white p-6 dark:border-gray-800 dark:bg-gray-900 sm:p-8`}
     >
       {isSubmitted ? (
         <div className="text-center">
@@ -106,7 +107,7 @@ const ContactForm = () => {
                 {...register("name", { required: "Name is required" })}
                 type="text"
                 placeholder="Name"
-                className="w-full rounded-lg border-2 border-gray-500 bg-transparent p-3 focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-500"
+                className="w-full rounded border border-gray-300 bg-white p-3 text-sm transition-colors focus:border-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-0 dark:border-gray-700 dark:bg-gray-900 dark:focus:border-gray-500 dark:focus:ring-gray-500"
                 aria-describedby="name-error"
               />
               {errors.name && (
@@ -128,7 +129,7 @@ const ContactForm = () => {
                 })}
                 type="email"
                 placeholder="Email"
-                className="w-full rounded-lg border-2 border-gray-500 bg-transparent p-3 focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-500"
+                className="w-full rounded border border-gray-300 bg-white p-3 text-sm transition-colors focus:border-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-0 dark:border-gray-700 dark:bg-gray-900 dark:focus:border-gray-500 dark:focus:ring-gray-500"
                 aria-describedby="email-error"
               />
               {errors.email && (
@@ -151,7 +152,7 @@ const ContactForm = () => {
               })}
               placeholder="Message"
               rows={5}
-              className="w-full rounded-lg border-2 border-gray-500 bg-transparent p-3 focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-500"
+              className="w-full rounded border border-gray-300 bg-white p-3 text-sm transition-colors focus:border-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-0 dark:border-gray-700 dark:bg-gray-900 dark:focus:border-gray-500 dark:focus:ring-gray-500"
               aria-describedby="message-error"
             />
             {errors.message && (
@@ -164,10 +165,10 @@ const ContactForm = () => {
           {/* Submit */}
           <button
             type="submit"
-            className={`${raleway800.className} w-full rounded-lg p-3 text-gray-200 dark:text-gray-800 ${
+            className={`${raleway600.className} w-full rounded border border-gray-900 bg-gray-900 p-3 text-sm text-white transition-colors ${
               loading
-                ? "cursor-not-allowed"
-                : "bg-gray-800 hover:bg-blue-500 dark:bg-gray-200 dark:hover:bg-blue-500"
+                ? "cursor-not-allowed bg-gray-400"
+                : "hover:bg-gray-800 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700"
             }`}
             disabled={loading}
           >
