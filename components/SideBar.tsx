@@ -2,21 +2,20 @@
 
 import {
   AcademicCapIcon,
-  ArrowDownTrayIcon,
   CodeBracketIcon,
   EnvelopeIcon,
   HomeIcon,
-} from "@heroicons/react/24/solid";
-import { motion } from "motion/react";
+} from "@heroicons/react/24/outline";
+import Link from "next/link";
 import React from "react";
 import { FiLinkedin } from "react-icons/fi";
 
-import { raleway800 } from "@/styles/fonts";
+import { raleway600 } from "@/styles/fonts";
 
 const TABS = [
   { text: "Home", href: "/", Icon: HomeIcon },
   {
-    text: "Experiences",
+    text: "Experience",
     href: "/experiences",
     Icon: AcademicCapIcon,
   },
@@ -43,72 +42,37 @@ interface TabProps {
 }
 
 const SideBar = ({ page }: SideBarProps) => {
-  const tabClassName = `${raleway800.className} text-md flex items-center gap-4 hover:text-blue-500`;
-
   return (
-    <div className="flex w-fit flex-col gap-4">
-      {/* Regular Tabs */}
+    <nav className="flex flex-col gap-2 border-t border-gray-200 pt-6 dark:border-gray-800">
       {TABS.filter((tab) => tab.text !== page).map(({ text, href, Icon }) => (
         <Tab key={text} href={href}>
-          <Icon className="h-5 w-5" />
-          {text}
+          <Icon className="h-4 w-4" />
+          <span>{text}</span>
         </Tab>
       ))}
-
-      {/* LinkedIn Tab */}
       <Tab href="https://www.linkedin.com/in/jialin-yang-jy/" newPage={true}>
-        <FiLinkedin className="h-5 w-5" />
-        LinkedIn
+        <FiLinkedin className="h-4 w-4" />
+        <span>LinkedIn</span>
       </Tab>
-
-      {/* Resume Tab */}
-      <motion.a
-        whileHover={{
-          transition: { duration: 0.2, ease: "easeOut" },
-        }}
-        className={tabClassName}
-        href="/files/Jialin_Resume_090825.pdf"
-        download="Jialin_Resume.pdf"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Download Jialin's Resume as a PDF"
-      >
-        <ArrowDownTrayIcon className="h-5 w-5 animate-bounce" />
-        Download Resume
-      </motion.a>
-    </div>
+    </nav>
   );
 };
 
 const Tab = ({ href, newPage = false, children }: TabProps) => {
-  const tabClassName = `${raleway800.className} text-md flex items-center gap-4 hover:text-blue-500`;
+  const baseClassName = `${raleway600.className} flex items-center gap-2 text-sm text-gray-600 transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100`;
 
   if (newPage) {
     return (
-      <motion.a
-        whileHover={{
-          transition: { duration: 0.2, ease: "easeOut" },
-        }}
-        className={tabClassName}
-        target="_blank"
-        rel="noopener noreferrer"
-        href={href}
-      >
+      <a className={baseClassName} target="_blank" rel="noopener noreferrer" href={href}>
         {children}
-      </motion.a>
+      </a>
     );
   }
 
   return (
-    <motion.a
-      whileHover={{
-        transition: { duration: 0.2, ease: "easeOut" },
-      }}
-      className={tabClassName}
-      href={href}
-    >
+    <Link className={baseClassName} href={href}>
       {children}
-    </motion.a>
+    </Link>
   );
 };
 

@@ -2,23 +2,17 @@
   {
     "id": 1,
     "title": "Minimal Pricing",
-    "dates": "Feb 2025",
-    "website": "https://www.minimalpricing.com/",
+    "dates": "Mar 2025 – Dec 2025 (Archived)",
+    "website": null,
     "tasks": [
       {
         "id": 1,
-        "description": "A minimal, responsive web app that generates dynamic contract quotes from user-provided requirements and options, offering transparent pricing summaries suitable for freelancers and small teams."
+        "description": "Client-side pricing and quoting tool built with Next.js and TypeScript. Designed client-side pricing logic and PDF generation with state persistence."
       }
     ],
     "skills": {
       "Languages": ["TypeScript"],
-      "Frontend": [
-        "React",
-        "Next.js",
-        "Tailwind CSS",
-        "Context API",
-        "sessionStorage"
-      ],
+      "Frontend": ["React", "Next.js", "Tailwind CSS"],
       "Cloud Platforms": ["Vercel"],
       "DevOps & Tools": ["Vercel Analytics"]
     }
@@ -26,12 +20,16 @@
   {
     "id": 2,
     "title": "Minibunn Planner",
-    "dates": "Mar 2025 - Jul 2025",
-    "website": "https://www.minibunnplanner.com/",
+    "dates": "July 2025 – Dec 2025 (Archived)",
+    "website": null,
     "tasks": [
       {
         "id": 1,
-        "description": "A focused productivity SaaS for task tracking and journaling that combines a clean kanban workflow with daily notes, reminders, and cross-device sync for personal planning."
+        "description": "Built a full-stack productivity SaaS using Next.js, FastAPI, and PostgreSQL with authentication and subscriptions"
+      },
+      {
+        "id": 2,
+        "description": "Discontinued responsibly by disabling billing, shutting down services, and archiving documentation"
       }
     ],
     "skills": {
@@ -41,8 +39,7 @@
         "Next.js",
         "Tailwind CSS",
         "React Query",
-        "Zustand",
-        "Context API"
+        "Zustand"
       ],
       "Backend": ["FastAPI", "RESTful APIs", "PostgreSQL", "SQLAlchemy"],
       "Cloud Platforms": ["Vercel", "Render"],
@@ -52,12 +49,12 @@
   {
     "id": 3,
     "title": "Knowli",
-    "dates": "Aug 2025 - Current",
+    "dates": "2025 – Present",
     "website": "https://apps.apple.com/us/app/knowli/id6749599315",
     "tasks": [
       {
         "id": 1,
-        "description": "A cross-platform microlearning app delivering 30-second, AI-generated stories and facts with a daily tap allowance, optional sign-in for history sync, and a distraction-free reading experience."
+        "description": "Built and operate a production learning system with Node.js, PostgreSQL, and AI-generated content delivery. Implemented backend APIs, data pipelines, in-app purchases, and analytics. Designed AI content generation pipelines with attention to quality, latency, and cost tradeoffs. Live on the App Store with active users."
       }
     ],
     "skills": {

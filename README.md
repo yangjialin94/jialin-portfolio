@@ -1,22 +1,22 @@
 # Jialin Yang — Portfolio
 
-This repository contains the source code for my personal portfolio website.
+Source code for my personal portfolio website.
 
-The site serves as a **central hub** for showcasing selected engineering projects, including production applications and archived work, along with links to my resume and professional profiles.
+The site serves as a central hub for selected **production engineering work**, including live applications, archived projects, and links to my resume and professional profiles.
 
-👉 Live site: https://www.jialinyang.com
+👉 Live site: <https://www.jialinyang.com>
 
 ---
 
 ## Purpose
 
-The goal of this portfolio is to:
+This portfolio is designed to:
 
-- Present **real, shipped projects** with clear scope and outcomes
-- Provide context around technical decisions and tradeoffs
-- Act as a lightweight companion to my resume for recruiters and collaborators
+- Showcase **real, shipped systems** with clear scope and outcomes
+- Provide context around technical decisions, tradeoffs, and ownership
+- Complement my resume for recruiters and technical collaborators
 
-This is intentionally **not** a blog or content platform.
+This is not a blog or content platform.
 
 ---
 
@@ -26,16 +26,17 @@ This is intentionally **not** a blog or content platform.
 - **Minibunn Planner** — A full-stack productivity SaaS (discontinued), archived with documentation and post-mortem
 
 Each project page focuses on:
-- Problem statement
-- System design and stack
+
+- Problem definition
+- System design and tech stack
 - Key engineering challenges
-- Final outcome
+- Outcome and current status
 
 ---
 
 ## Tech Stack
 
-The portfolio is built as a modern, performant static web application:
+This site is built as a lightweight static web application:
 
 - **Framework**: Next.js (React, TypeScript)
 - **Styling**: Tailwind CSS
@@ -43,7 +44,7 @@ The portfolio is built as a modern, performant static web application:
 - **Forms**: React Hook Form
 - **Hosting**: Vercel
 
-The implementation is intentionally minimal to keep focus on the projects themselves.
+The implementation is intentionally minimal to keep attention on the work itself.
 
 ---
 
@@ -51,4 +52,4 @@ The implementation is intentionally minimal to keep focus on the projects themse
 
 This repository is provided for personal and professional reference.
 
-The design and content may not be reused without permission.
+Design and content may not be reused without permission.

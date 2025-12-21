@@ -7,7 +7,7 @@
     "tasks": [
       {
         "id": 1,
-        "description": "Developed a transaction code lookup tool as a Fiori application on SAP Cloud Platform, reducing transaction search time from 10 seconds to 3 seconds. "
+        "description": "Developed a transaction code lookup tool as a Fiori application on SAP Cloud Platform, reducing transaction search time from 10 seconds to 3 seconds"
       }
     ],
     "skills": {
@@ -26,19 +26,19 @@
     "tasks": [
       {
         "id": 1,
-        "description": "Engineered and deployed 10+ enterprise-grade SAP Cloud Platform applications (JavaScript, SAPUI5, OData), including custom reporting tools and a B2B self-service portal"
+        "description": "Engineered and deployed 10+ enterprise-grade SAP Cloud Platform applications using JavaScript, SAPUI5, and OData"
       },
       {
         "id": 2,
-        "description": "Implemented advanced CRUD operations for sales documents, integrating custom search, email functionalities, and credit card processing, enhancing business efficiency."
+        "description": "Built custom reporting tools and a B2B self-service portal"
       },
       {
         "id": 3,
-        "description": "Optimized OData data transfers from SAP ECC systems, collaborating with backend teams to significantly enhance API response times and reduce latency by 50%. "
+        "description": "Optimized OData data transfers from SAP ECC systems, reducing latency by 50%"
       },
       {
         "id": 4,
-        "description": "Architected and independently built a comprehensive internal time-tracking system (PTO, sick leave, approval workflows, expense reimbursement with image uploads) leveraging SAP HANA and SAPUI5. "
+        "description": "Architected and built an internal time-tracking system with PTO, sick leave, approval workflows, and expense reimbursement using SAP HANA and SAPUI5"
       }
     ],
     "skills": {
@@ -51,38 +51,38 @@
   },
   {
     "id": 3,
-    "title": "Founding Software Engineer",
+    "title": "Frontend Development Lead (Founding Engineer)",
     "company": "Nuve",
     "dates": "Jul 2021 - Dec 2024",
-    "website": "https://www.linkedin.com/company/nuve-platform/",
+    "website": null,
     "tasks": [
       {
-        "id": 1,
-        "description": "Led frontend development and maintenance of the company's SaaS web platform using Next.js, TypeScript, and Tailwind CSS, delivering seamless digital experiences to 7 enterprise clients."
-      },
-      {
-        "id": 2,
-        "description": "Automated SAP tasks, achieving a 95% reduction in SAP system setup times and enabling new instances to spin up in as little as 10 minutes."
-      },
-      {
-        "id": 3,
-        "description": "Boosted application performance and responsiveness by 35% through strategic Zustand integration for state management, significantly reducing unnecessary re-renders."
-      },
-      {
-        "id": 4,
-        "description": "Designed and implemented scalable asynchronous FastAPI backends with Tortoise ORM and PostgreSQL, co-developing API routes and managing database migrations."
-      },
-      {
-        "id": 5,
-        "description": "Streamlined infrastructure management and instance creation by integrating cloud automation solutions using AWS, Azure, and GCP APIs."
+        "id": 7,
+        "description": "Led frontend development of the SaaS web platform using Next.js, TypeScript, and Tailwind CSS"
       },
       {
         "id": 6,
-        "description": "Translated Figma designs into a responsive, production-ready marketing site deployed on Vercel, ensuring optimal performance and cross-device compatibility."
+        "description": "Improved application performance by 35% through state management optimization"
       },
       {
-        "id": 7,
-        "description": "Enhanced analytics tracking by integrating Google Analytics and PostHog, providing data-driven insights for continuous platform improvements and user behavior analysis."
+        "id": 2,
+        "description": "Built scalable FastAPI backends with PostgreSQL, implementing API routes and managing database migrations"
+      },
+      {
+        "id": 1,
+        "description": "Owned end-to-end system architecture and operations for a SaaS platform serving 7 enterprise clients"
+      },
+      {
+        "id": 3,
+        "description": "Automated SAP system setup, reducing setup time by 95%"
+      },
+      {
+        "id": 4,
+        "description": "Automated cloud infrastructure and instance provisioning across AWS, Azure, and GCP"
+      },
+      {
+        "id": 5,
+        "description": "Integrated Google Analytics and PostHog to guide product and performance decisions"
       }
     ],
     "skills": {
