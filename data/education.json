@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "institution": "University of Pennsylvania",
+    "degree": "Master of Science - MS, Artificial Intelligence",
+    "dates": "Jan 2026 - Expected Dec 2027",
+    "logo": "/images/penn-logo.png"
+  },
+  {
+    "id": 2,
+    "institution": "Illinois Institute of Technology",
+    "degree": "Master of Science - MS, Information Technology & Management",
+    "dates": "Jan 2018 - Dec 2018",
+    "logo": "/images/iit-logo.png"
+  },
+  {
+    "id": 3,
+    "institution": "University of Illinois Urbana-Champaign",
+    "degree": "Bachelor of Science - BS, Math & Computer Science",
+    "dates": "Aug 2013 - May 2017",
+    "logo": "/images/uiuc-logo.png"
+  }
+]

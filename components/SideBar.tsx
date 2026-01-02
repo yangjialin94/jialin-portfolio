@@ -5,6 +5,7 @@ import {
   CodeBracketIcon,
   EnvelopeIcon,
   HomeIcon,
+  BookOpenIcon,
 } from "@heroicons/react/24/outline";
 import Link from "next/link";
 import React from "react";
@@ -23,6 +24,11 @@ const TABS = [
     text: "Projects",
     href: "/projects",
     Icon: CodeBracketIcon,
+  },
+  {
+    text: "Education",
+    href: "/education",
+    Icon: BookOpenIcon,
   },
   {
     text: "Contact",

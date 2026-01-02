@@ -57,28 +57,28 @@
     "website": null,
     "tasks": [
       {
-        "id": 7,
-        "description": "Led frontend development of the SaaS web platform using Next.js, TypeScript, and Tailwind CSS"
-      },
-      {
-        "id": 6,
-        "description": "Improved application performance by 35% through state management optimization"
+        "id": 1,
+        "description": "Owned end-to-end system architecture and operations for a SaaS platform serving 7 enterprise clients"
       },
       {
         "id": 2,
         "description": "Built scalable FastAPI backends with PostgreSQL, implementing API routes and managing database migrations"
       },
       {
-        "id": 1,
-        "description": "Owned end-to-end system architecture and operations for a SaaS platform serving 7 enterprise clients"
+        "id": 4,
+        "description": "Automated cloud infrastructure and instance provisioning across AWS, Azure, and GCP"
       },
       {
         "id": 3,
         "description": "Automated SAP system setup, reducing setup time by 95%"
       },
       {
-        "id": 4,
-        "description": "Automated cloud infrastructure and instance provisioning across AWS, Azure, and GCP"
+        "id": 7,
+        "description": "Led frontend development of the SaaS web platform using Next.js, TypeScript, and Tailwind CSS"
+      },
+      {
+        "id": 6,
+        "description": "Improved application performance by 35% through state management optimization"
       },
       {
         "id": 5,

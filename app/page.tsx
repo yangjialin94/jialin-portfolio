@@ -28,7 +28,8 @@ export default function HomePage() {
               Jialin Yang
             </h1>
             <p className="mt-3 text-base text-gray-600 dark:text-gray-400 sm:text-lg">
-              Software Engineer | Full-Stack Systems | Incoming MSE-AI @ UPenn
+              Software Engineer | Full-Stack Systems | Transitioning toward ML Platform Engineering
+              | MSE-AI @ Penn
             </p>
           </div>
         </div>
@@ -38,13 +39,13 @@ export default function HomePage() {
             I build and operate production systems used by real users.
           </p>
           <p className="text-sm text-gray-600 dark:text-gray-400 sm:text-base">
-            Actively seeking Summer 2026 Machine Learning / Data internships.
+            Seeking Summer 2026 Machine Learning / Platform Engineering internships.
           </p>
         </div>
 
         <div className="flex flex-wrap gap-3">
           <Link
-            href="/files/Jialin_Resume_12202025.pdf"
+            href="/files/Jialin_Resume_01022026.pdf"
             download="Jialin_Resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
@@ -54,16 +55,22 @@ export default function HomePage() {
             Resume
           </Link>
           <Link
+            href="/experiences"
+            className={`${raleway600.className} inline-flex items-center rounded border border-gray-300 bg-white px-4 py-2 text-sm text-gray-700 transition-colors hover:bg-gray-50 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 dark:hover:bg-gray-800`}
+          >
+            Experience
+          </Link>
+          <Link
             href="/projects"
             className={`${raleway600.className} inline-flex items-center rounded border border-gray-300 bg-white px-4 py-2 text-sm text-gray-700 transition-colors hover:bg-gray-50 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 dark:hover:bg-gray-800`}
           >
             Projects
           </Link>
           <Link
-            href="/experiences"
+            href="/education"
             className={`${raleway600.className} inline-flex items-center rounded border border-gray-300 bg-white px-4 py-2 text-sm text-gray-700 transition-colors hover:bg-gray-50 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 dark:hover:bg-gray-800`}
           >
-            Experience
+            Education
           </Link>
         </div>
       </section>
@@ -80,9 +87,9 @@ export default function HomePage() {
           production support.
         </p>
         <p className="text-sm leading-6 text-gray-700 dark:text-gray-300 sm:text-base">
-          I&apos;m currently expanding my focus toward machine learning through the MSE-AI program
-          at the University of Pennsylvania, building a strong foundation in data, modeling, and
-          applied ML systems.
+          I&apos;m currently expanding my focus toward machine learning systems through the MSE-AI
+          program at the University of Pennsylvania, with the goal of working on ML platform and
+          applied ML infrastructure.
         </p>
       </section>
 

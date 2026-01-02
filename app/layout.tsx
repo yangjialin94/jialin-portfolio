@@ -8,14 +8,14 @@ import ThemeSwitcher from "@/components/ThemeSwitcher";
 export const metadata = {
   title: "Jialin Yang — Software Engineer",
   description:
-    "Software Engineer with 6+ years of experience building and operating production systems, transitioning toward ML via UPenn MSE-AI.",
+    "Software Engineer with 6+ years of experience building and operating production systems, transitioning toward ML via Penn MSE-AI.",
   icons: {
     icon: "/favicon.ico",
   },
   openGraph: {
     title: "Jialin Yang — Software Engineer",
     description:
-      "Software Engineer with 6+ years of experience building and operating production systems, transitioning toward ML via UPenn MSE-AI.",
+      "Software Engineer with 6+ years of experience building and operating production systems, transitioning toward ML via Penn MSE-AI.",
     url: "https://jialinyang.com",
     siteName: "Jialin Yang's Portfolio",
     images: [
@@ -33,7 +33,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "Jialin Yang — Software Engineer",
     description:
-      "Software Engineer with 6+ years of experience building and operating production systems, transitioning toward ML via UPenn MSE-AI.",
+      "Software Engineer with 6+ years of experience building and operating production systems, transitioning toward ML via Penn MSE-AI.",
     images: ["https://jialinyang.com/images/jialin-122324.jpg"],
   },
 };
