@@ -44,7 +44,7 @@ export default function HomePage() {
 
         <div className="flex flex-wrap gap-3">
           <Link
-            href="/files/Jialin_Resume_01022026.pdf"
+            href="/files/Jialin_Resume_01152026.pdf"
             download="Jialin_Resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
