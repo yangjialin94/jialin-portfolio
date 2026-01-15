@@ -28,18 +28,17 @@ export default function HomePage() {
               Jialin Yang
             </h1>
             <p className="mt-3 text-base text-gray-600 dark:text-gray-400 sm:text-lg">
-              Software Engineer | Full-Stack Systems | Transitioning toward ML Platform Engineering
-              | MSE-AI @ Penn
+              Software Engineer | M.S. Artificial Intelligence @ Penn | Applied AI Focus
             </p>
           </div>
         </div>
 
         <div className="max-w-2xl space-y-2">
           <p className="text-sm text-gray-700 dark:text-gray-300 sm:text-base">
-            I build and operate production systems used by real users.
+            I build and operate production software systems used by real users.
           </p>
           <p className="text-sm text-gray-600 dark:text-gray-400 sm:text-base">
-            Seeking Summer 2026 Machine Learning / Platform Engineering internships.
+            Exploring Summer 2026 internships aligned with applied AI and software systems.
           </p>
         </div>
 
@@ -87,9 +86,9 @@ export default function HomePage() {
           production support.
         </p>
         <p className="text-sm leading-6 text-gray-700 dark:text-gray-300 sm:text-base">
-          I&apos;m currently expanding my focus toward machine learning systems through the MSE-AI
-          program at the University of Pennsylvania, with the goal of working on ML platform and
-          applied ML infrastructure.
+          I&apos;m currently expanding my focus toward applied AI systems through the M.S. in
+          Artificial Intelligence program at the University of Pennsylvania, building foundations in
+          machine learning and data-driven system design.
         </p>
       </section>
 
