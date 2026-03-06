@@ -28,7 +28,7 @@ export default function HomePage() {
               Jialin Yang
             </h1>
             <p className="mt-3 text-base text-gray-600 dark:text-gray-400 sm:text-lg">
-              Software Engineer | M.S. Artificial Intelligence @ Penn | Applied AI Focus
+              Software Engineer | M.S. Artificial Intelligence @ Penn
             </p>
           </div>
         </div>
