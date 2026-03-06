@@ -33,12 +33,9 @@ export default function HomePage() {
           </div>
         </div>
 
-        <div className="max-w-2xl space-y-2">
+        <div className="max-w-2xl space-y-2 pb-6 pt-4">
           <p className="text-sm text-gray-700 dark:text-gray-300 sm:text-base">
             I build and operate production software systems used by real users.
-          </p>
-          <p className="text-sm text-gray-600 dark:text-gray-400 sm:text-base">
-            Exploring Summer 2026 internships aligned with applied AI and software systems.
           </p>
         </div>
 
@@ -89,6 +86,10 @@ export default function HomePage() {
           I&apos;m currently expanding my focus toward applied AI systems through the M.S. in
           Artificial Intelligence program at the University of Pennsylvania, building foundations in
           machine learning and data-driven system design.
+        </p>
+        <p className="text-sm leading-6 text-gray-700 dark:text-gray-300 sm:text-base">
+          I will be seeking full-time Software Engineer or AI/ML Systems roles starting October
+          2027.
         </p>
       </section>
 
