@@ -3,11 +3,14 @@ export interface Task {
   description: string;
 }
 
+/** Skill categories used in experiences.json and projects.json. All keys optional. */
 export interface Skill {
   Languages?: string[];
   Frontend?: string[];
   Backend?: string[];
-  DevOps?: string[];
+  "Cloud Platforms"?: string[];
+  "DevOps & Tools"?: string[];
+  Methodologies?: string[];
 }
 
 export interface ExperienceOrProject {
