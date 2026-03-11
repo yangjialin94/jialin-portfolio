@@ -1,19 +1,12 @@
 "use client";
 
 import SideBar from "@/components/SideBar";
-import Education from "@/data/education.json";
+import { education } from "@/data/education";
+import { EducationEntry } from "@/types/types";
 import Image from "next/image";
 
-interface EducationEntry {
-  id: number;
-  institution: string;
-  degree: string;
-  dates: string;
-  logo?: string;
-}
-
 export default function EducationPage() {
-  const educationEntries = [...Education].sort((a, b) => a.id - b.id);
+  const educationEntries = [...education].sort((a, b) => a.id - b.id);
 
   return (
     <div className="space-y-12">

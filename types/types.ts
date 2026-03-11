@@ -20,3 +20,11 @@ export interface ExperienceOrProject {
   tasks: Task[];
   skills: Skill;
 }
+
+export interface EducationEntry {
+  id: number;
+  institution: string;
+  degree: string;
+  dates: string;
+  logo?: string;
+}

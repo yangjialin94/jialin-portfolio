@@ -2,11 +2,11 @@
 
 import Card from "@/components/Card";
 import SideBar from "@/components/SideBar";
-import Experiences from "@/data/experiences.json";
+import { experiences } from "@/data/experiences";
 import { ExperienceOrProject } from "@/types/types";
 
 export default function ExperiencesPage() {
-  const experiences = [...Experiences].sort((a, b) => b.id - a.id);
+  const sortedExperiences = [...experiences].sort((a, b) => b.id - a.id);
 
   return (
     <div className="space-y-12">
@@ -20,7 +20,7 @@ export default function ExperiencesPage() {
       </div>
 
       <div className="space-y-8">
-        {experiences.map((experience: ExperienceOrProject) => (
+        {sortedExperiences.map((experience: ExperienceOrProject) => (
           <Card key={experience.id} data={experience} type="experience" />
         ))}
       </div>
